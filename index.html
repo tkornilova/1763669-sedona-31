@@ -8,13 +8,13 @@
 
   <header>
     <nav>
-      <a>
-        <img src="img/index-logo.svg" width="138" height="571" alt="Логотип сайта городка Седона">
+      <a href="index.html">
+        <img src="#" width="138" height="571" alt="Логотип сайта городка Седона">
       </a>
       <ul>
         <li><a href="blank.html">Информация</a></li>
         <li><a href="blank.html">Фото и видео</a></li>
-        <li><a href="blank.html">Капта штата</a></li>
+        <li><a href="blank.html">Карта штата</a></li>
         <li><a href="catalog.html">Гостиницы</a></li>
       </ul>
     </nav>
@@ -24,15 +24,15 @@
     <h1>Sedona City</h1>
     <section>
       <h2>Welcome!</h2>
-      <!-- Нужно ли вставлять картинку (фон)?-->
-      Седона — небольшой городок в Аризоне,заслуживающий большего!<br>
-      Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!
+      <!-- Тут будет фон -->
+      <p>Седона — небольшой городок в Аризоне,заслуживающий большего!</p>
+      <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
     </section>
     <section>
       <h2>Content</h2>
         <ol>
-          <li><h3>Настоящий городок</h3><br>
-            Седона — не аттракцион для туристов, там течёт своя жизнь
+          <li><h3>Настоящий городок</h3>
+            <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p> 
               <ul>
                 <li><h4>Жилье</h4>
                   <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
@@ -45,24 +45,24 @@
                 </li>
               </ul>
           </li>
-          <li><h3>Там есть мост дьявола</h3><br>
-            Да, по нему можно пройти! Если конечно вы осмелитесь
+          <li><h3>Там есть мост дьявола</h3>
+            <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
           </li>
-          <li><h3>Hебольшая площадь</h3><br>
-            Все достопримечательности находятся очень близко
+          <li><h3>Hебольшая площадь</h3>
+          <p>Все достопримечательности находятся очень близко</p>
           </li>
-          <li><h3>Красивая дорога</h3><br>
-            Ехать в седону из лас-вегаса совсем не скучно!
+          <li><h3>Красивая дорога</h3>
+          <p>Ехать в седону из лас-вегаса совсем не скучно!</p>
           </li>
-          <li><h3>Мало туристов</h3><br>
-            Большинство едет в гранд каньон и толпится там
+          <li><h3>Мало туристов</h3>
+          <p>Большинство едет в гранд каньон и толпится там</p>
           </li>
         </ol>
     </section>
     <section>
       <h2>Traveling form</h2>
-      Заинтересовались?<br>
-      Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне<br>
+      <p>Заинтересовались?</p>
+      <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
       <a href="catalog.html">ПОИСК ГОСТИНИЦЫ В седоне</a>
       <!-- Тут будет карта -->
     </section>
@@ -71,10 +71,12 @@
   <footer>
     <h2>Contact us</h2>
     <section>
-     #visitSEDONA<br>
-     <a href="tel:+78005558628">+7 800 555-86-28</a>
+      <h3>Phone number</h3>
+        <p>#visitSEDONA</p>
+        <a href="tel:88005558628">+7 800 555-86-28</a>
     </section>
     <section>
+    <h3>Social networks</h3>
     <ul>
       <li>
         <a href="#">Twitter</a>
@@ -88,6 +90,7 @@
     </ul>
     </section>
     <section>
+    <h3>Create by</h3>
       Website by <a href="https://htmlacademy.ru">.htmlacademy</a>
     </section>
   </footer>
@@ -96,17 +99,16 @@
     <h2>Choose a hotel</h2>
     <form action="https://echo.htmlacademy.ru" method="post">
       <label for="date-in">Дата заезда</label>
-      <input id="date-in" type="date" name="date" placeholder="24 апреля 2017">
+      <input id="date-in" type="date" name="date" value="2017-04-24">
   </form>
   <form action="https://echo.htmlacademy.ru" method="post">
     <label for="date-out">Дата выезда</label>
-    <input id="date-out" type="date" name="date" placeholder="4 июля 2017">
+    <input id="date-out" type="date" name="date" value="2017-07-04">
 </form>
-<!-- Не знаю, как делать кнопки +/-. Нашла в инетрнете код ниже, но хз как им правильно воспрользоваться
-<button class="bt_minus">-</button>
-    <input type="text" class="quantity" value="1" data-max-count="20">
-    <button class="bt_plus">+</button>
-    -->
+<!-- Выбор количества детей и взрослых -->
+    <button>
+    <a href="https://echo.htmlacademy.ru/">Найти</a>
+    </button>
   </section>
 
   </body>
