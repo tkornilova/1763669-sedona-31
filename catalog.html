@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Каталог отелей в Седоне</title>
+  </head>
+<body>
+ <header>
+     <nav>
+      <a>
+         <img src="img/index-logo.svg" width="138" height="571" alt="Логотип сайта городка Седона">
+          </a>
+          <ul>
+            <li><a href="blank.html">Информация</a></li>
+            <li><a href="blank.html">Фото и видео</a></li>
+            <li><a href="blank.html">Капта штата</a></li>
+            <li><a href="catalog.html">Гостиницы</a></li>
+          </ul>
+     </nav>
+</header>
+<main>
+    <h1>Choose a hotel</h1>
+    <section>
+        <h2>Parameters</h2>
+        <form method="get" action="https://echo.htmlacademy.ru">
+            <fieldset>
+              <legend>Инфроструктура:</legend>
+              <ul>
+                <li>
+                    <input type="checkbox" name="pool" id="pool" checked>
+            <label for="pool">Бассейн</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="parking" id="parking">
+            <label for="parking">Парковка</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="wi-fi" id="wi-fi">
+            <label for="wi-fi">WI-FI</label>
+                </li>
+              <ul>
+            </fieldset>
+         </form>
+         <form method="get" action="https://echo.htmlacademy.ru">
+            <fieldset>
+              <legend>Тип жилья:</legend>
+              <ul>
+                <li>
+                    <input type="checkbox" name="hotel" id="hotel" checked>
+            <label for="hotel">Гостиница</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="motel" id="motel" checked>
+            <label for="motel">Мотель</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="apartment" id="apartment" checked>
+            <label for="apartment">Апартаменты</label>
+                </li>
+              <ul>
+            </fieldset>
+         </form>
+        Стоимость в сутки, ₽:<br>
+        <!-- Не смогла найти тег для изменения цены (бегунок) :c -->
+        <button>
+            <a href="#">Показать</a>
+        </button>
+    </section>
+    <section>
+     <h2>Data sorting</h2>
+     Сортировка
+     <ul>
+         <li>По цене</li>
+         <li>По типу</li>
+         <li>По рейтингу</li>
+        <!-- Я подозреваю, что тут нужно сделать что-то еще, чтобы при выборе сортировки, расположение
+        данных менялось. Но я не догадалась, что именно -->
+     </ul>
+     <ul>
+         <li>
+             <a href="#">
+                 <h3>Amara Resort & Spa</h3>
+                 <img src="#" alt="Amara Resort & Spa hotel">
+             </a>
+             Гостиница
+             От 4000₽
+             <button>
+              <a href="#">Подробнее</a>
+            </button> 
+            <!-- Или лучше кнопку Подробнее переместить в предыдущий тег <а>? -->
+            <button>
+                <a href="#">Забронировать</a>
+              </button> 
+         </li>
+         <li>
+            <a href="#">
+                <h3>Desert Quail Inn</h3>
+                <img src="#" alt="Desert Quail Inn motel">
+            </a>
+            Мотель
+            От 3000₽
+            <button>
+             <a href="#">Подробнее</a>
+           </button> 
+           <!-- Или лучше кнопку Подробнее переместить в предыдущий тег <а>? -->
+           <button>
+               <a href="#">Забронировать</a>
+             </button> 
+        </li>
+        <li>
+            <a href="#">
+                <h3>Villas at Poco Diablo</h3>
+                <img src="#" alt="Villas at Poco Diablo apartment">
+            </a>
+            Апартаменты
+            От 2000₽
+            <button>
+             <a href="#">Подробнее</a>
+           </button> 
+           <!-- Или лучше кнопку Подробнее переместить в предыдущий тег <а>? -->
+           <button>
+               <a href="#">Забронировать</a>
+             </button> 
+        </li>
+     </ul>
+    </section>
+</main>
+
+<footer>
+    <h2>Contact us</h2>
+    <section>
+     #visitSEDONA<br>
+     <a href="tel:+78005558628">+7 800 555-86-28</a>
+    </section>
+    <section>
+    <ul>
+      <li>
+        <a href="#">Twitter</a>
+      </li>
+      <li>
+        <a href="#">Facebook</a>
+      </li>
+      <li>
+        <a href="#">YouTube</a>
+      </li>
+    </ul>
+    </section>
+    <section>
+      Website by <a href="https://htmlacademy.ru">.htmlacademy</a>
+    </section>
+  </footer>
+</body>
+</html>
