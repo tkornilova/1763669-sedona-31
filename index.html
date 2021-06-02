@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link rel="icon" href="favicon.ico" type="image/svg+xml">
   </head>
-  <body>
+  <body class="page-body">
 
-  <header>
-    <nav>
-      <a href="index.html">
+  <header class="main-header">
+    <nav class="main-navigation">
+      <a class="main-header-logo" href="index.html">
         <img src="img/logo-sedona.svg" width="138" height="70" alt="Логотип сайта городка Седона">
       </a>
-      <ul>
+      <ul class="site-navigation">
         <li><a href="blank.html">Информация</a></li>
         <li><a href="blank.html">Фото и видео</a></li>
         <li><a href="blank.html">Карта штата</a></li>
@@ -20,85 +20,85 @@
       </ul>
     </nav>
   </header>
-   
-  <main>
+
+  <main class="container">
     <h1>Sedona City</h1>
-    <section>
+    <section class="container-welcome">
       <h2>Welcome!</h2>
       <!-- Тут будет фон -->
       <p>Седона — небольшой городок в Аризоне,заслуживающий большего!</p>
       <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
     </section>
-    <section>
+    <section class="container-content">
       <h2>Content</h2>
-        <ol>
-          <li><h3>Настоящий городок</h3>
+        <ol class="features-list">
+          <li class="features-item"><h3>Настоящий городок</h3>
             <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
-            <img src="img/photo-sedona-1.jpg" width="800" height="256" alt="Улица города Седона"> 
-              <ul>
-                <li><h4>Жилье</h4>
+            <img src="img/photo-sedona-1.jpg" width="800" height="256" alt="Улица города Седона">
+              <ul class="advantages-list">
+                <li class="advantages-item"><h4>Жилье</h4>
                   <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
                 </li>
-                <li><h4>Еда</h4>
+                <li class="advantages-item"><h4>Еда</h4>
                   <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
                 </li>
-                <li><h4>Сувениры</h4>
+                <li class="advantages-item"><h4>Сувениры</h4>
                   <p>Не только китайского, но и местного производства!</p>
                 </li>
               </ul>
           </li>
-          <li><h3>Там есть мост дьявола</h3>
+          <li class="features-item"><h3>Там есть мост дьявола</h3>
             <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
             <img src="img/photo-sedona-2.jpg" width="800" height="256" alt="Каньон в городе Седона">
           </li>
-          <li><h3>Hебольшая площадь</h3>
+          <li class="features-item"><h3>Hебольшая площадь</h3>
           <p>Все достопримечательности находятся очень близко</p>
           </li>
-          <li><h3>Красивая дорога</h3>
+          <li class="features-item"><h3>Красивая дорога</h3>
           <p>Ехать в седону из лас-вегаса совсем не скучно!</p>
           </li>
-          <li><h3>Мало туристов</h3>
+          <li class="features-item"><h3>Мало туристов</h3>
           <p>Большинство едет в гранд каньон и толпится там</p>
           </li>
         </ol>
     </section>
-    <section>
+    <section class="container-traveling-form">
       <h2>Traveling form</h2>
       <p>Заинтересовались?</p>
       <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
-      <a href="catalog.html">ПОИСК ГОСТИНИЦЫ В седоне</a>
+      <a href="catalog.html">Поиск гостиницы в Седоне</a>
       <img src="img/map.jpg" width="1199" height="594" alt="  Расположение города Седона на карте">
     </section>
   </main>
 
-  <footer>
+  <footer class="main-footer">
     <h2>Contact us</h2>
-    <section>
+    <section class="contacts">
       <h3>Phone number</h3>
         <p>#visitSEDONA</p>
-        <a href="tel:88005558628">+7 800 555-86-28</a>
+        <a class="contacts-phone" href="tel:88005558628">+7 800 555-86-28</a>
     </section>
-    <section>
+    <section class="socials">
     <h3>Social networks</h3>
-    <ul>
-      <li>
-        <a href="#">
+    <ul class="socials-list">
+      <li class="socials-item">
+        <a class="button-socials" href="#">
           <img src="img/icon-twitter.svg" width="17" height="17" alt="Twitter сайта">
         </a>
       </li>
-      <li>
-        <a href="#">
+      <li class="socials-item">
+        <a class="button-socials" href="#">
           <img src="img/icon-fb.svg" width="12" height="22" alt="Facebook сайта">
         </a>
       </li>
-      <li>
-        <a href="#">
+      <li class="socials-item">
+        <a class="button-socials" href="#">
           <img src="img/icon-youtube.svg" width="20" height="16" alt="YouTube сайта">
         </a>
       </li>
     </ul>
     </section>
-    <section>
+    <section class="copyright">
     <h3>Create by</h3>
       Website by <a href="https://htmlacademy.ru">
         <img src="img/logo-htmlacademy.svg" width="115" height="33" alt="Логотип HTML Academy">
@@ -106,15 +106,19 @@
     </section>
   </footer>
 
-  <section>
+  <section class="modal">
     <h2>Choose a hotel</h2>
-    <form action="https://echo.htmlacademy.ru" method="post">
-      <label for="date-in">Дата заезда</label>
-      <input id="date-in" type="date" name="date" value="2017-04-24">
-      <label for="date-out">Дата выезда</label>
-      <input id="date-out" type="date" name="date" value="2017-07-04">
+    <form class="booking-date" action="https://echo.htmlacademy.ru" method="post">
+      <p class="booking-date-in">
+        <label for="date-in">Дата заезда</label>
+        <input id="date-in" type="date" name="date" value="2017-04-24">
+      </p>
+      <p class="booking-date-out">
+        <label for="date-out">Дата выезда</label>
+        <input id="date-out" type="date" name="date" value="2017-07-04">
+      </p>
       <!-- Выбор количества детей и взрослых -->
-      <button type="submit">Найти</button>>
+      <button class="button-find" type="submit">Найти</button>>
   </form>
   </section>
 
