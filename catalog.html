@@ -29,55 +29,53 @@
   </header>
 
   <main class="container">
-    <h1>Choose a hotel</h1>
+    <h1 class="hidden">Choose a hotel</h1>
       <section class="container-parameters">
-        <h2>Parameters</h2>
+        <h2 class="hidden">Parameters</h2>
           <form method="get" action="https://echo.htmlacademy.ru">
-          <fieldset class="infrastructure">
+          <fieldset class="parameters">
           <legend>Инфраструктура:</legend>
-          <ul class="infrastructure-list">
-            <li class="infrastructure-pool">
+            <p>
               <input type="checkbox" name="pool" id="pool" checked>
               <label for="pool">Бассейн</label>
-            </li>
-            <li class="infrastructure-parking">
+            </p>
+            <p>
               <input type="checkbox" name="parking" id="parking">
               <label for="parking">Парковка</label>
-            </li>
-            <li class="infrastructure-wifi">
+            </p>
+            <p>
               <input type="checkbox" name="wi-fi" id="wi-fi">
               <label for="wi-fi">WI-FI</label>
-            </li>
-          </ul>
-        </fieldset>
-        <fieldset class="housing">
+            </p>
+          </fieldset>
+          <fieldset class="parameters">
           <legend>Тип жилья:</legend>
-          <ul class="housing-list">
-            <li class="housing-hotel">
+            <p>
               <input type="checkbox" name="hotel" id="hotel" checked>
               <label for="hotel">Гостиница</label>
-            </li>
-            <li class="housing-motel">
+            </p>
+            <p>
               <input type="checkbox" name="motel" id="motel" checked>
               <label for="motel">Мотель</label>
-            </li>
-            <li class="housing-apartment">
+            </p>
+            <p>
               <input type="checkbox" name="apartment" id="apartment" checked>
               <label for="apartment">Апартаменты</label>
-            </li>
-          </ul>
-        </fieldset>
-          <p class="price">Стоимость в сутки, ₽:</p>
-          <button class="button-show" type="submit">Показать</button>
+            </p>
+          </fieldset>
+          <fieldset class="parameters">
+          <legend>Стоимость в сутки, ₽:</legend>
+            <button class="button-show" type="submit">Показать</button>
+          </fieldset>>
           </form>
       </section>
       <section class="sorting">
-        <h2>Data sorting</h2>
+        <h2 class="hidden">Data sorting</h2>
           <p class="sorting-title">Сортировка</p>
           <ul class="sorting-list">
-            <li class="sorting-item"><a class="sorting-price" href="#">По цене</a></li>
-            <li class="sorting-item"><a class="sorting-type" href="#">По типу</a></li>
-            <li class="sorting-item"><a class="sorting-rating" href="#">По рейтингу</a></li>
+            <li class="sorting-item"><a href="#">По цене</a></li>
+            <li class="sorting-item"><a href="#">По типу</a></li>
+            <li class="sorting-item"><a href="#">По рейтингу</a></li>
           </ul>
           <ul class="hotels-list">
             <li class="hotels-item">
@@ -127,16 +125,16 @@
   </main>
 
   <footer class="main-footer">
-    <h2>Contact us</h2>
+    <h2 class="hidden">Contact us</h2>
       <section class="contacts">
-        <h3>Phone number</h3>
+        <h3 class="hidden">Phone number</h3>
           <p>
             #visitSEDONA
           </p>
           <a class="contacts-phone" href="tel:88005558628">+7 800 555-86-28</a>
       </section>
       <section class="socials">
-        <h3>Social networks</h3>
+        <h3 class="hidden">Social networks</h3>
           <ul class="socials-list">
             <li class="socials-item">
               <a class="button-socials" href="#">
@@ -156,7 +154,7 @@
           </ul>
       </section>
       <section class="copyright">
-        <h3>Create by</h3>
+        <h3 class="hidden">Create by</h3>
           <p>Website by</p>
           <a href="https://htmlacademy.ru">
             <img src="img/logo-htmlacademy.svg" width="115" height="33" alt="Логотип HTML Academy">
@@ -165,7 +163,7 @@
   </footer>
 
   <section class="modal">
-    <h2>Choose a hotel</h2>
+    <h2 class="hidden">Choose a hotel</h2>
       <form class="booking-date" action="https://echo.htmlacademy.ru" method="post">
         <p class="booking-date-in">
           <label for="date-in">Дата заезда</label>

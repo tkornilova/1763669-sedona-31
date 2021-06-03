@@ -20,25 +20,26 @@ body {
   color: var(--basic-white);
   text-transform: uppercase;
   background-color: var(--basic-white);
-  background-image: url("img/background-main.jpg");
-  background-position: top center;
-  background-repeat: no-repeat;
 }
+
+.hidden {
+  display: none;
+}
+
 
 .main-navigation a:hover,
 .main-navigation a:focus {
-  text-decoration: none; /* не сработало :( */
+  text-decoration: none;
+  list-style: none; /* Не убрались булит поинтс */
   font-size: 14px;
   line-height: 26px;
   color: var(--basic-black);
   background-color: transparent;
-  text-decoration: none;
-  text-align: center; /* почему-то не сработало :( */
+  text-align: center;
+  display: inline-block; /* Добавила инлайн блок, чтобы они были в линии, но не поняла с шириной */
 }
 
-.main-header-logo {
-  text-align: center; /* почему-то не сработало :( */
-}
+
 
 .main-navigation-wrapper {
   background-color: var(--basic-white);
@@ -62,32 +63,56 @@ body {
   text-align: center;
 }
 
-.features-item-1,
-.features-item-2 {
+.features-item-blue {
+  background-color: var(--blue);
+}
+
+.features-item-blue h3 {
   font-size: 21px;
   font-weight: 700;
   line-height: 21px;
   color: var(--basic-white);
-  background-color: var(--blue);
+  background-color: transparent;
   text-align: center;
 }
 
-.description-item-1,
-.description-item-2 {
+.features-item-blue .description-item {
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
   color: var(--basic-white);
-  background-color: var(--blue); /* Лучше прописывать background или обернуть блок в div? */
+  background-color: transparent;
+  text-align: center;
+}
+
+.features-item-gray {
+  background-color: var(--light-gray); /* Лучше прописывать background или обернуть блок в div? */
+}
+
+.features-item-gray h3 {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 21px;
+  color: var(--basic-black);
+  background-color: transparent;
+  text-align: center;
+}
+
+.features-item-gray .description-item {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: var(--dark-gray);
+  background-color: var(--light-gray);
   text-align: center;
 }
 
 .advantages-list {
-  background-color: var(--light-gray);
-  text-decoration: none;
+  background-color: var(--basic-white);
+  list-style: none;
 }
 
-.advantages-item h4 {
+.advantages-list h4 {
   font-size: 21px;
   font-weight: 700;
   line-height: 21px;
@@ -96,34 +121,12 @@ body {
   text-align: center;
 }
 
-.advantages-item p {
+.advantages-list p {
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
   color: var(--dark-gray);
   background-color: transparent;
-  text-align: center;
-}
-
-.features-item-3,
-.features-item-4,
-.features-item-5 {
-  font-size: 21px;
-  font-weight: 700;
-  line-height: 21px;
-  color: var(--basic-black);
-  background-color: var(--light-gray); /* Лучше прописывать background или обернуть блок в div? */
-  text-align: center;
-}
-
-.description-item-3,
-.description-item-4,
-.description-item-5 {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 21px;
-  color: var(--dark-gray);
-  background-color: var(--light-gray);
   text-align: center;
 }
 
@@ -194,10 +197,13 @@ body {
   text-align: center; /* не работает :( */
 }
 
-/* Нужно ли убирать рамку в fieldset? */
-.infrastructure legend,
-.housing legend,
-.price legend {
+fieldset {
+  background-image: url("img/background-catalog.jpg"); /* Странно добавился фон */
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.parameters legend {
   font-size: 14px;
   font-weight: 700;
   line-height: 21px;
@@ -206,12 +212,7 @@ body {
   text-align: left;
  }
 
-.pool,
-.parking,
-.wifi,
-.hotel,
-.motel,
-.apartment {
+.parameters label {
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
@@ -240,12 +241,8 @@ body {
   background-color: transparent;
  }
 
- .sorting-price: hover,
- .sorting-price: focus,
- .sorting-type: hover,
- .sorting-type: focus,
- .sorting-rating: hover,
- .sorting-rating: focus {
+ .sorting-item: hover,
+ .sorting-item: focus {
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
