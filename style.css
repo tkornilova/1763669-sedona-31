@@ -1,0 +1,301 @@
+:root {
+  --basic-white: #ffffff;
+  --basic-black: #000000;
+  --blue: #81B3D2;
+  --brown: #766357;
+  --dark-gray: #333333;
+  --light-gray: #EEEEEE;
+  --extra-light-gray: #F2F2F2;
+  --gray: #666666;
+}
+
+body {
+  min-width: 960px;
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: var(--basic-white);
+  text-transform: uppercase;
+  background-color: var(--basic-white);
+  background-image: url("img/background-main.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.main-navigation a:hover,
+.main-navigation a:focus {
+  text-decoration: none; /* не сработало :( */
+  font-size: 14px;
+  line-height: 26px;
+  color: var(--basic-black);
+  background-color: transparent;
+  text-decoration: none;
+  text-align: center; /* почему-то не сработало :( */
+}
+
+.main-header-logo {
+  text-align: center; /* почему-то не сработало :( */
+}
+
+.main-navigation-wrapper {
+  background-color: var(--basic-white);
+}
+
+.caption-main {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
+  color: var(--basic-black);
+  background-color: transparent;
+  text-align: center;
+}
+
+.caption-reasons {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 26px;
+  color: var(--basic-black);
+  background-color: transparent;
+  text-align: center;
+}
+
+.features-item-1,
+.features-item-2 {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 21px;
+  color: var(--basic-white);
+  background-color: var(--blue);
+  text-align: center;
+}
+
+.description-item-1,
+.description-item-2 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: var(--basic-white);
+  background-color: var(--blue); /* Лучше прописывать background или обернуть блок в div? */
+  text-align: center;
+}
+
+.advantages-list {
+  background-color: var(--light-gray);
+  text-decoration: none;
+}
+
+.advantages-item h4 {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 21px;
+  color: var(--basic-black);
+  background-color: transparent;
+  text-align: center;
+}
+
+.advantages-item p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: var(--dark-gray);
+  background-color: transparent;
+  text-align: center;
+}
+
+.features-item-3,
+.features-item-4,
+.features-item-5 {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 21px;
+  color: var(--basic-black);
+  background-color: var(--light-gray); /* Лучше прописывать background или обернуть блок в div? */
+  text-align: center;
+}
+
+.description-item-3,
+.description-item-4,
+.description-item-5 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: var(--dark-gray);
+  background-color: var(--light-gray);
+  text-align: center;
+}
+
+.traveling-form-title {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 24px;
+  color: var(--basic-black);
+  background-color: transparent;
+  text-align: center;
+}
+
+.traveling-form-description {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  color: var(--dark-gray);
+  background-color: transparent;
+  text-align: center;
+}
+
+.container-traveling-form a {
+  text-decoration: none;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
+  color: var(--basic-white);
+  background-color: var(--brown);
+  text-align: center; /* и опять не сработало :( */
+}
+
+/* Нужно ли во всплывающем окне как-то делать background для примера дат? Или это потом? */
+.modal label {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 26px;
+  color: var(--basic-black);
+  background-color: transparent;
+  text-align: center;
+}
+
+.button-find {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
+  color: var(--basic-white);
+  background-color: var(--blue);
+  text-align: center; /* и опять не сработало :( */
+}
+
+.contacts p,
+.contacts a {
+  text-decoration: none;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
+  color: var(--basic-black);
+  background-color: transparent;
+  text-align: center; /* не работает :( */
+}
+
+.copyright p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 26px;
+  color: var(--basic-black);
+  background-color: transparent;
+  text-align: center; /* не работает :( */
+}
+
+/* Нужно ли убирать рамку в fieldset? */
+.infrastructure legend,
+.housing legend,
+.price legend {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+  color: var(--basic-white);
+  background-color: transparent;
+  text-align: left;
+ }
+
+.pool,
+.parking,
+.wifi,
+.hotel,
+.motel,
+.apartment {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: var(--basic-white);
+  background-color: transparent;
+  text-align: left;
+}
+
+ /* Нужно показывть рамку у кнопки? */
+ .button-show:hover,
+ .button-show:focus {
+  border: 2px solid var(--basic-white);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+  color: var(--basic-white);
+  background-color: transparent;
+  text-align: left;
+ }
+
+ .sorting-title {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  color: var(--basic-black);
+  background-color: transparent;
+ }
+
+ .sorting-price: hover,
+ .sorting-price: focus,
+ .sorting-type: hover,
+ .sorting-type: focus,
+ .sorting-rating: hover,
+ .sorting-rating: focus {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  color: var(--basic-black);
+  background-color: transparent;
+ }
+
+ .hotels-list li {
+   border-top: 1px solid #E5E5E5;
+   border-bottom: 1px solid #E5E5E5;
+ }
+
+ .hotels-item  a {
+  text-decoration: none;
+ }
+
+ .hotels-item h3 {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
+  color: var(--basic-black);
+  background-color: transparent;
+  text-align: left;
+ }
+
+.button-rating {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: var(--gray);
+  background-color: var(--extra-light-gray);
+  text-align: center;
+}
+
+ .button-details {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+  color: var(--basic-white);
+  background-color: var(--blue);
+  text-align: center;
+ }
+
+ .button-book {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+  color: var(--basic-white);
+  background-color: var(--brown);
+  text-align: center;
+ }
