@@ -46,6 +46,10 @@ body {
   background-color: var(--basic-white);
 }
 
+.container-background {
+  background: url(img/background-main.jpg) var(--gray) no-repeat scroll;
+}
+
 .caption-main {
   font-size: 21px;
   font-weight: 700;
@@ -186,7 +190,7 @@ body {
   line-height: 26px;
   color: var(--basic-black);
   background-color: transparent;
-  text-align: center; /* не работает :( */
+  text-align: center;
 }
 
 .copyright p {
@@ -195,14 +199,13 @@ body {
   line-height: 26px;
   color: var(--basic-black);
   background-color: transparent;
-  text-align: center; /* не работает :( */
+  text-align: center;
 }
 
-/* Сделала так, но по критериям написано что нужно все через классы */
-fieldset {
-  background-image: url("img/background-catalog.jpg"); /* Странно добавился фон */
-  background-position: top center;
-  background-repeat: no-repeat;
+/* Размера фотовой картинки не хватает, но я думаю, что мы потом блоки переметим и все ок будет */
+.parameters {
+  background: url("img/background-catalog.jpg") no-repeat top center;
+  border: none;
 }
 
 .parameters legend {
