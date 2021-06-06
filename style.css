@@ -31,7 +31,7 @@ body {
 .main-navigation a:hover,
 .main-navigation a:focus {
   text-decoration: none;
-  list-style: none; /* Не убрались булит поинтс */
+  list-style: none;
   font-size: 14px;
   line-height: 26px;
   color: var(--basic-black);
@@ -46,8 +46,11 @@ body {
   background-color: var(--basic-white);
 }
 
+ /* Добавила цвет (один из критериев), но он больше картинки. Это ок? */
 .container-background {
   background: url(img/background-main.jpg) var(--gray) no-repeat scroll;
+  background-size: cover;
+  height: 509px;
 }
 
 .caption-main {
