@@ -28,12 +28,13 @@
     </div>
   </header>
 
-  <main class="container">
+  <main class="container container-inner">
     <h1 class="hidden">Choose a hotel</h1>
       <section class="container-parameters">
         <h2 class="hidden">Parameters</h2>
           <form method="get" action="https://echo.htmlacademy.ru">
           <fieldset class="parameters">
+          <div class="parameters-item">
           <legend>Инфраструктура:</legend>
             <p>
               <input type="checkbox" name="pool" id="pool" checked>
@@ -47,6 +48,8 @@
               <input type="checkbox" name="wi-fi" id="wi-fi">
               <label for="wi-fi">WI-FI</label>
             </p>
+            </div>
+          <div class="parameters-item">
           <legend>Тип жилья:</legend>
             <p>
               <input type="checkbox" name="hotel" id="hotel" checked>
@@ -60,12 +63,15 @@
               <input type="checkbox" name="apartment" id="apartment" checked>
               <label for="apartment">Апартаменты</label>
             </p>
+          </div>
+          <div class="parameters-item">
           <legend>Стоимость в сутки, ₽:</legend>
             <button class="button-show" type="submit">Показать</button>
-          </fieldset>>
+          </div>
+          </fieldset>
           </form>
       </section>
-      <section class="sorting">
+      <section class="container-sorting">
         <h2 class="hidden">Data sorting</h2>
           <p class="sorting-title">Сортировка</p>
           <ul class="sorting-list">

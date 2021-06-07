@@ -10,6 +10,10 @@
   --beige: #E5E5E5;
 }
 
+.page {
+  height: 100%;
+}
+
 body {
   min-width: 960px;
   margin: 0;
@@ -21,6 +25,11 @@ body {
   color: var(--basic-white);
   text-transform: uppercase;
   background-color: var(--basic-white);
+
+  min-height: 100%;
+  display: grid;
+  grid-template-columns: min-content 1fr min min-content;
+  align-content: start;
 }
 
 .hidden {
@@ -127,6 +136,7 @@ body {
   color: var(--basic-black);
   background-color: transparent;
   text-align: center;
+  padding-top: 160px;
 }
 
 .advantages-list p {
@@ -136,6 +146,7 @@ body {
   color: var(--dark-gray);
   background-color: transparent;
   text-align: center;
+  padding-top: 25px;
 }
 
 .traveling-form-title {
@@ -208,7 +219,10 @@ body {
 /* Размера фотовой картинки не хватает, но я думаю, что мы потом блоки переметим и все ок будет */
 .parameters {
   background: url("img/background-catalog.jpg") no-repeat top center;
+  background-size: cover;
+  height: 217px;
   border: none;
+  margin: 0;
 }
 
 .parameters legend {
@@ -265,7 +279,8 @@ body {
 
  .hotels-item  a {
   text-decoration: none;
- }
+  height: 150px;
+}
 
  .hotels-item h3 {
   font-size: 21px;
@@ -304,3 +319,93 @@ body {
   background-color: var(--brown);
   text-align: center;
  }
+
+ .main-header {
+   border: 5px solid red;
+ }
+
+ .container {
+  border: 5px solid blueviolet;
+}
+
+.main-footer {
+  border: 5px solid greenyellow;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-content: start;
+}
+
+.contacts {
+  border: 5px solid palevioletred;
+  justify-self: center;
+  width: 327;
+  margin-top: 23;
+  margin-bottom: 36;
+}
+
+ .socials {
+  border: 5px solid fuchsia;
+  justify-self: center;
+  width: 327;
+  margin-top: 36;
+  margin-bottom: 36;
+}
+
+.copyright {
+  border: 5px solid skyblue;
+  justify-self: center;
+  width: 327;
+  margin-top: 43;
+  margin-bottom: 44;
+}
+
+/* Пыталась паддингами настроить положение текста, не вышло */
+.advantages-list {
+  border: 5px solid yellow;
+  display: grid;
+  padding: 0;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-content: start;
+}
+
+.advantages-item {
+  border: 5px solid hotpink;
+  margin: 0 0;
+  width: 400px;
+  height: 330px;;
+  justify-content: center;
+  display: inline-block;
+}
+
+.container-inner {
+  border: 5px solid yellow;
+  display: grid;
+  padding: 0;
+  margin: 0;
+  grid-template-rows: 1fr 1fr;
+}
+
+.container-parameters {
+  border: 5px solid blue;
+  height: 217px;
+  padding: 0;
+  margin: 0;
+}
+
+.container-sorting {
+  border: 5px solid greenyellow;
+}
+
+.hotels-list {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.parameters {
+  display: grid;
+  grid-template-columns: 25% 25% 50%;
+}
+
+.parameters-item {
+  border: 5px solid tomato;
+}
