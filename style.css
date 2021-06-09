@@ -2,7 +2,11 @@
   --basic-white: #ffffff;
   --basic-black: #000000;
   --blue: #81B3D2;
+  --deeper-blue: #669EC0;
+  --deepest-blue: #5496BD;
   --brown: #766357;
+  --deeper-brown: #604E43;
+  --deepest-brown: #503E33;
   --dark-gray: #333333;
   --light-gray: #EEEEEE;
   --extra-light-gray: #F2F2F2;
@@ -36,19 +40,27 @@ body {
   display: none;
 }
 
+.main-navigation a {
+  text-decoration: none;
+  color: var(--basic-black);
+  font-size: 14px;
+  line-height: 26px;
+  background-color: transparent;
+}
 
 .main-navigation a:hover,
 .main-navigation a:focus {
-  text-decoration: none;
-  list-style: none;
-  font-size: 14px;
-  line-height: 26px;
-  color: var(--basic-black);
-  background-color: transparent;
-  text-align: center;
-  display: inline-block; /* Добавила инлайн блок, чтобы они были в линии, но не поняла с шириной */
+  color: var(--blue);
 }
 
+.main-navigation a:active {
+  color: var(--basic-black);
+  opacity: 0.3;
+}
+
+.main-navigation .current-page {
+ color: var(--brown);
+}
 
 
 .main-navigation-wrapper {
@@ -174,10 +186,18 @@ body {
   line-height: 26px;
   color: var(--basic-white);
   background-color: var(--brown);
-  text-align: center; /* и опять не сработало :( */
 }
 
-/* Нужно ли во всплывающем окне как-то делать background для примера дат? Или это потом? */
+.container-traveling-form a:hover,
+.container-traveling-form a:focus {
+  background-color: var(--deeper-brown);
+}
+
+.container-traveling-form a:active {
+  background-color: var(--deepest-brown);
+  opacity: 0.3;
+}
+
 .modal label {
   font-size: 14px;
   font-weight: 700;
@@ -193,7 +213,15 @@ body {
   line-height: 26px;
   color: var(--basic-white);
   background-color: var(--blue);
-  text-align: center; /* и опять не сработало :( */
+}
+.button-find:hover,
+.button-find:focus {
+  background-color: var(--deeper-blue);
+}
+
+.button-find:active {
+  background-color: var(--deepest-blue);
+  opacity: 0.3;
 }
 
 .contacts p,
@@ -255,21 +283,42 @@ body {
   text-align: left;
  }
 
+ .sorting-list {
+  list-style-type: none;
+ }
+
  .sorting-title {
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
-  color: var(--basic-black);
+  color: var(--basic-black);;
   background-color: transparent;
  }
 
- .sorting-item: hover,
- .sorting-item: focus {
+ .sorting-item a {
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
   color: var(--basic-black);
+  opacity: 0.3;
   background-color: transparent;
+  text-decoration: none;
+  border-bottom: dotted var(--blue); /* Это можно было сделать по-другому? */
+ }
+
+ .sorting-item a:hover,
+ .sorting-item a:focus {
+  color: var(--blue);
+  border-bottom: dotted var(--blue);
+ }
+
+.sorting-item a:active { /* Как сделать этотй кнопке, чтобы она всегда была без подчеркивания? */
+  color: var(--basic-black);
+ }
+
+ .sorting-item .current-sorting {
+   color: var(--blue);
+   border-bottom: none;
  }
 
  .hotels-list li {
@@ -289,7 +338,18 @@ body {
   color: var(--basic-black);
   background-color: transparent;
   text-align: left;
+  text-decoration: none; /* Не смогла убрать окрашивание ссылки */
  }
+
+ .hotels-item h3:hover,
+ .hotels-item h3:focus {
+   color: var(--blue);
+ }
+
+ .hotels-item h3:active {
+  color: var(--basic-black);
+  opacity: 0.3;
+}
 
 .button-rating {
   font-size: 14px;
@@ -310,6 +370,18 @@ body {
   text-align: center;
  }
 
+ .button-details:hover,
+ .button-details:focus {
+  color: var(--basic-white);
+  background-color: var(--deeper-blue);
+ }
+
+ .button-details:active {
+  color: var(--basic-white);
+  background-color: var(--deepest-blue);
+  opacity: 0.3;
+ }
+
  .button-book {
   text-decoration: none;
   font-size: 14px;
@@ -319,6 +391,17 @@ body {
   background-color: var(--brown);
   text-align: center;
  }
+
+ .button-book:hover,
+ .button-book:focus {
+  color: var(--basic-white);
+  background-color: var(--deeper-brown);
+ }
+
+ .button-book:active {
+  color: var(--basic-white);
+  background-color: var(--deepest-brown);
+  opacity: 0.3;
 
  .main-header {
    border: 5px solid red;
