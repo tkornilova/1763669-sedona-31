@@ -40,39 +40,57 @@ body {
   display: none;
 }
 
-.main-navigation a {
+.site-navigation {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+}
+
+.site-navigation a {
   text-decoration: none;
   color: var(--basic-black);
   font-size: 14px;
   line-height: 26px;
   background-color: transparent;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
-.main-navigation a:hover,
-.main-navigation a:focus {
+.site-navigation a:hover,
+.site-navigation a:focus {
   color: var(--blue);
 }
 
-.main-navigation a:active {
+.site-navigation a:active {
   color: var(--basic-black);
   opacity: 0.3;
 }
 
-.main-navigation .current-page {
+.site-navigation a .current-page {
  color: var(--brown);
 }
 
+.main-header-logo {
+  position: absolute;
+  text-align: center;
+  padding-left: 600px;
+  margin: 0;
+}
 
 .main-navigation-wrapper {
   background-color: var(--basic-white);
 }
 
- /* Добавила цвет (один из критериев), но он больше картинки. Это ок? */
 .container-background {
   background: url(img/background-main.jpg) var(--gray) no-repeat scroll;
   background-size: cover;
   height: 509px;
+  text-align: center;
+  padding-top: 74px;
 }
+
 
 .caption-main {
   font-size: 21px;
@@ -92,63 +110,71 @@ body {
   text-align: center;
 }
 
-.features-item-blue {
+.line-1 {
+  display: grid;
+  grid-template-columns: 400px 800px;
+  align-content: start;
+  padding: 0;
+  margin: 0;
+}
+
+.line-1-position-1 {
   background-color: var(--blue);
+  padding: 50px 50px;
+  border: 5px solid red;
 }
 
-.features-item-blue h3 {
+.line-1-position-1 h3 {
   font-size: 21px;
   font-weight: 700;
   line-height: 21px;
   color: var(--basic-white);
-  background-color: transparent;
   text-align: center;
 }
 
-.features-item-blue .description-item {
+.line-1-position-1 p {
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
   color: var(--basic-white);
-  background-color: transparent;
   text-align: center;
+  padding-top: 25px;
 }
 
-.features-item-gray {
-  background-color: var(--light-gray); /* Лучше прописывать background или обернуть блок в div? */
-}
-
-.features-item-gray h3 {
-  font-size: 21px;
-  font-weight: 700;
-  line-height: 21px;
-  color: var(--basic-black);
-  background-color: transparent;
-  text-align: center;
-}
-
-.features-item-gray .description-item {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 21px;
-  color: var(--dark-gray);
-  background-color: var(--light-gray);
-  text-align: center;
+.line-1-position-2 {
+  border: 5px solid green; /* Картинка немного недоходит до края ячейки*/
 }
 
 .advantages-list {
+  display: grid;
+  grid-template-columns: 400px 400px 400px; /* Почему то саму ячейку показывает больще, чем должно быть*/
+  align-content: start;
+  margin: 0;
+  padding: 0;
+
+  border: 5px solid brown;
+}
+
+.advantages-item {
+  color: var(--basic-black);
   background-color: var(--basic-white);
+  text-align: center;
   list-style: none;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 160px;
+  padding-bottom: 80px;
+  box-sizing: border-box;
+
+  border: 5px solid yellowgreen;
 }
 
 .advantages-list h4 {
   font-size: 21px;
   font-weight: 700;
   line-height: 21px;
-  color: var(--basic-black);
-  background-color: transparent;
-  text-align: center;
-  padding-top: 160px;
+  margin: 0;
+  padding-bottom: 25px;
 }
 
 .advantages-list p {
@@ -156,10 +182,86 @@ body {
   font-weight: 400;
   line-height: 21px;
   color: var(--dark-gray);
-  background-color: transparent;
+  margin: 0;
+  padding: 0;
+}
+
+.line-3 {
+  display: grid;
+  grid-template-columns: 800px 400px;
+  align-content: start;
   text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.line-3-position-1 {
+  border: 5px solid green; /* Картинка немного недоходит до края ячейки*/
+}
+
+.line-3-position-2 {
+  background-color: var(--blue);
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+
+  border: 5px solid red;
+}
+
+.line-3-position-2 h3 {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 21px;
+  color: var(--basic-white);
+}
+
+.line-3-position-2 p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: var(--basic-white);
   padding-top: 25px;
 }
+
+.line-4-features {
+  display: grid;
+  grid-template-columns: 400px 400px 400px;
+  align-content: start;
+  margin: 0;
+  padding: 0;
+}
+
+.line-4-features li{
+  background-color: var(--light-gray);
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+  list-style: none;
+  text-align: center;
+  box-sizing: border-box;
+
+  border: 5px solid orangered;
+}
+
+.line-4-features-item h3 {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 21px;
+  color: var(--basic-black);
+}
+
+.line-4-features-item p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: var(--dark-gray);
+}
+
+
+
+
 
 .traveling-form-title {
   font-size: 30px;
@@ -168,34 +270,44 @@ body {
   color: var(--basic-black);
   background-color: transparent;
   text-align: center;
+  padding-top: 60px;;
 }
 
 .traveling-form-description {
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 24px;
   color: var(--dark-gray);
   background-color: transparent;
   text-align: center;
+  padding-bottom: 25px;
 }
 
-.container-traveling-form a {
+.button-find-hotel {
   text-decoration: none;
   font-size: 21px;
   font-weight: 700;
   line-height: 26px;
   color: var(--basic-white);
   background-color: var(--brown);
+  padding-left: 125px;
+  padding-right: 125px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center; /* Не получается кнопку сделать посередине*/
 }
 
-.container-traveling-form a:hover,
-.container-traveling-form a:focus {
+.button-find-hotel:hover,
+.button-find-hotel:focus {
   background-color: var(--deeper-brown);
 }
 
-.container-traveling-form a:active {
+.button-find-hotel:active {
   background-color: var(--deepest-brown);
   opacity: 0.3;
+}
+container-traveling-form img {
+  padding: 0;
 }
 
 .modal label {
@@ -248,12 +360,21 @@ body {
 .parameters {
   background: url("img/background-catalog.jpg") no-repeat top center;
   background-size: cover;
-  height: 217px;
   border: none;
   margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 25% 25% 50%;
 }
 
-.parameters legend {
+.parameters-item {
+  padding-top: 12px;
+  padding-left: 70px;
+  padding-bottom: 32px;
+  border: 5px solid tomato;
+}
+
+.parameters h3 {
   font-size: 14px;
   font-weight: 700;
   line-height: 21px;
@@ -271,9 +392,8 @@ body {
   text-align: left;
 }
 
- /* Нужно показывть рамку у кнопки? */
- .button-show:hover,
- .button-show:focus {
+ /* Не получается сделать прозрачную кнопку */
+ .button-show{
   border: 2px solid var(--basic-white);
   font-size: 14px;
   font-weight: 700;
@@ -402,6 +522,7 @@ body {
   color: var(--basic-white);
   background-color: var(--deepest-brown);
   opacity: 0.3;
+ }
 
  .main-header {
    border: 5px solid red;
@@ -442,31 +563,6 @@ body {
   margin-bottom: 44;
 }
 
-/* Пыталась паддингами настроить положение текста, не вышло */
-.advantages-list {
-  border: 5px solid yellow;
-  display: grid;
-  padding: 0;
-  grid-template-columns: 1fr 1fr 1fr;
-  align-content: start;
-}
-
-.advantages-item {
-  border: 5px solid hotpink;
-  margin: 0 0;
-  width: 400px;
-  height: 330px;;
-  justify-content: center;
-  display: inline-block;
-}
-
-.container-inner {
-  border: 5px solid yellow;
-  display: grid;
-  padding: 0;
-  margin: 0;
-  grid-template-rows: 1fr 1fr;
-}
 
 .container-parameters {
   border: 5px solid blue;
@@ -484,11 +580,3 @@ body {
   grid-template-rows: 1fr 1fr 1fr;
 }
 
-.parameters {
-  display: grid;
-  grid-template-columns: 25% 25% 50%;
-}
-
-.parameters-item {
-  border: 5px solid tomato;
-}
