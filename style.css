@@ -443,6 +443,10 @@ container-traveling-form img {
  text-decoration: none;
  }
 
+ .hotels-item {
+   display: flex;
+ }
+
  .hotels-item  a {
   text-decoration: none;
   height: 150px;
@@ -567,8 +571,20 @@ container-traveling-form img {
   margin: 0;
 }
 
-.container-sorting {
+/* Слово СОРТИРОВКА расположено немного выше остальных*/
+.sorting {
   border: 5px solid greenyellow;
+  display: flex;
+  margin-left: 236px;
+  margin-top: 31px;
+  margin-bottom: 36px;
+  padding: 0;
+}
+
+.sorting-list {
+  display: flex;
+  width: 240px;
+  justify-content: space-between;
 }
 
 .hotels-list {
@@ -576,3 +592,29 @@ container-traveling-form img {
   grid-template-rows: 1fr 1fr 1fr;
 }
 
+.modal-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0 auto;
+  width: 568px;
+
+  border: 5px solid royalblue;
+}
+
+.booking-date-in {
+  margin-top: 55px;
+  text-align: center;
+}
+
+.booking-date-out {
+  margin-top: 29px;
+  text-align: center;
+}
+
+.button-find {
+  margin-top: 54px;
+  width: 458px;
+  height: 58px;
+  text-transform: uppercase;
+}
