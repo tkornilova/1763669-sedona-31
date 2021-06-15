@@ -74,6 +74,7 @@
       <section class="container-sorting">
         <h2 class="hidden">Data sorting</h2>
         <div class="sorting">
+          <p class='sorting-found'>Найдено: 3</p>
           <p class="sorting-title">Сортировка</p>
           <ul class="sorting-list">
             <li class="sorting-item current-sorting"><a href="#">По цене</a></li>
@@ -83,46 +84,80 @@
         </div>
           <ul class="hotels-list">
             <li class="hotels-item">
-              <h3><a href="#" class="hotel-name">Amara Resort & Spa</a></h3>
-                <a class="button-details" href="#">Подробнее</a>
-                <a class="button-book" href="#">Забронировать</a>
+              <div class="column-image">
                 <img src="img/hotel-1.jpg" alt="Amara Resort & Spa hotel" width="135" height="90">
-                <p>Гостиница</p>
-                <p>От 4000₽</p>
+              </div>
+              <div class="column-info">
+                <h3><a href="#" class="hotel-name">Amara Resort & Spa</a></h3>
+                  <div class="column-price">
+                    <p>Гостиница</p>
+                    <p>От 4000₽</p>
+                  </div>
+                  <div class="colunm-book">
+                    <a class="button-details" href="#">Подробнее</a>
+                    <a class="button-book" href="#">Забронировать</a>
+                  </div>
+              </div>
+              <div class="column-rating">
+                <div>
+                  <img src="img/icon-star.svg" width="19" height="17" alt="Звёздочка рейтинга">
+                  <img src="img/icon-star.svg" width="19" height="17" alt="Звёздочка рейтинга">
+                  <img src="img/icon-star.svg" width="19" height="17" alt="Звёздочка рейтинга">
+                  <img src="img/icon-star.svg" width="19" height="17" alt="Звёздочка рейтинга">
+                </div>
                 <p class="button-rating" >Рейтинг: 8,5</p>
-                <div>
-                  <img src="img/icon-star.svg" width="19" height="17" alt="Звёздочка рейтинга">
-                  <img src="img/icon-star.svg" width="19" height="17" alt="Звёздочка рейтинга">
-                  <img src="img/icon-star.svg" width="19" height="17" alt="Звёздочка рейтинга">
-                  <img src="img/icon-star.svg" width="19" height="17" alt="Звёздочка рейтинга">
-                </div>
+              </div>
             </li>
             <li class="hotels-item">
-              <h3><a href="#" class="hotel-name">Desert Quail Inn</a></h3>
-                <a class="button-details" href="#">Подробнее</a>
-                <a class="button-book" href="#">Забронировать</a>
+              <div class="column-image">
                 <img src="img/hotel-2.jpg" alt="Desert Quail Inn motel" width="135" height="90">
-                <p>Мотель</p>
-                <p>От 3000₽</p>
-                <p class="button-rating">Рейтинг: 8,9</p>
+              </div>
+              <div class="column-info">
+                <h3><a href="#" class="hotel-name">Desert Quail Inn</a></h3>
+                  <div class="column-price">
+                    <p>Мотель</p>
+                    <p>От 3000₽</p>
+                  </div>
+                  <div class="colunm-book">
+                    <a class="button-details" href="#">Подробнее</a>
+                    <a class="button-book" href="#">Забронировать</a>
+                  </div>
+              </div>
+              <div class="column-rating">
                 <div>
                   <img src="img/icon-star.svg" width="19" height="17" alt="Звёздочка рейтинга">
                   <img src="img/icon-star.svg" width="19" height="17" alt="Звёздочка рейтинга">
                   <img src="img/icon-star.svg" width="19" height="17" alt="Звёздочка рейтинга">
                 </div>
+                <p class="button-rating" >Рейтинг: 8,9</p>
+              </div>
             </li>
+
+
+
+
             <li class="hotels-item">
-              <h3><a href="#" class="hotel-name">Villas at Poco Diablo</a></h3>
-                <a class="button-details" href="#">Подробнее</a>
-                <a class="button-book" href="#">Забронировать</a>
+              <div class="column-image">
                 <img src="img/hotel-3.jpg" alt="Villas at Poco Diablo apartment" width="135" height="90">
-                <p>Апартаменты</p>
-                <p>От 2000₽</p>
-                <p class="button-rating">Рейтинг: 9,2</p>
+              </div>
+              <div class="column-info">
+                <h3><a href="#" class="hotel-name">Villas at Poco Diablo</a></h3>
+                  <div class="column-price">
+                    <p>Апартаменты</p>
+                    <p>От 3000₽</p>
+                  </div>
+                  <div class="colunm-book">
+                    <a class="button-details" href="#">Подробнее</a>
+                    <a class="button-book" href="#">Забронировать</a>
+                  </div>
+              </div>
+              <div class="column-rating">>
                 <div>
                   <img src="img/icon-star.svg" width="19" height="17" alt="Звёздочка рейтинга">
                   <img src="img/icon-star.svg" width="19" height="17" alt="Звёздочка рейтинга">
                 </div>
+                <p class="button-rating" >Рейтинг: 9,2</p>
+              </div>
             </li>
           </ul>
       </section>
@@ -165,22 +200,6 @@
           </a>
       </section>
   </footer>
-
-  <section class="modal">
-    <h2 class="hidden">Choose a hotel</h2>
-      <form class="booking-date" action="https://echo.htmlacademy.ru" method="post">
-        <p class="booking-date-in">
-          <label for="date-in">Дата заезда</label>
-          <input id="date-in" type="date" name="date" value="2017-04-24">
-        </p>
-        <p class="booking-date-out">
-          <label for="date-out">Дата выезда</label>
-          <input id="date-out" type="date" name="date" value="2017-07-04">
-        </p>
-        <!-- Выбор количества детей и взрослых -->
-      <button class="button-find" type="submit">Найти</button>>
-      </form>
-  </section>
 
 </body>
 

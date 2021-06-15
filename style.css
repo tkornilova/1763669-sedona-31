@@ -47,6 +47,7 @@ body {
   text-decoration: none;
   list-style: none;
   margin: 0;
+  padding: 0;
 }
 
 .site-navigation a {
@@ -132,6 +133,8 @@ body {
   line-height: 21px;
   color: var(--basic-white);
   text-align: center;
+  margin-bottom: 25px;
+  padding: 0;
 }
 
 .line-1-position-1 p {
@@ -140,7 +143,12 @@ body {
   line-height: 21px;
   color: var(--basic-white);
   text-align: center;
-  padding-top: 25px;
+  margin-bottom: 23px;
+  padding: 0;
+}
+
+.line-1-position-1 p:last-child {
+  margin-bottom: 0;
 }
 
 .line-1-position-2 {
@@ -213,6 +221,9 @@ body {
   font-weight: 700;
   line-height: 21px;
   color: var(--basic-white);
+  text-align: center;
+  margin-bottom: 25px;
+  padding: 0;
 }
 
 .line-3-position-2 p {
@@ -220,7 +231,13 @@ body {
   font-weight: 400;
   line-height: 21px;
   color: var(--basic-white);
-  padding-top: 25px;
+  text-align: center;
+  margin-bottom: 25px;
+  padding: 0;
+}
+
+.line-3-position-2 p:last-child {
+  margin-bottom: 0;
 }
 
 .line-4-features {
@@ -434,6 +451,11 @@ container-traveling-form img {
    border-bottom: none;
  }
 
+ .hotels-list{
+   padding: 0;
+   margin: 0;
+ }
+
  .hotels-list li {
    border-top: 1px solid var(--beige);
    border-bottom: 1px solid var(--beige);
@@ -443,32 +465,43 @@ container-traveling-form img {
  text-decoration: none;
  }
 
- .hotels-item {
-   display: flex;
- }
 
  .hotels-item  a {
   text-decoration: none;
   height: 150px;
 }
 
- .hotels-item h3 {
+ .hotel-name {
   font-size: 21px;
   font-weight: 700;
   line-height: 26px;
   color: var(--basic-black);
   background-color: transparent;
   text-align: left;
+  padding: 0;
+  margin-bottom: 7px;
  }
 
- .hotels-item h3:hover,
- .hotels-item h3:focus {
+ .hotel-name:hover,
+ .hotel-name:focus {
    color: var(--blue);
  }
 
- .hotels-item h3:active {
+ .hotel-name:active {
   color: var(--basic-black);
   opacity: 0.3;
+}
+
+.column-price {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: var(--basic-black);
+}
+
+.column-price p{
+  display: inline-block;
+
 }
 
 .button-rating {
@@ -478,6 +511,9 @@ container-traveling-form img {
   color: var(--gray);
   background-color: var(--extra-light-gray);
   text-align: center;
+
+  width: 110px;
+  height: 27px;
 }
 
  .button-details {
@@ -555,6 +591,26 @@ container-traveling-form img {
   margin-bottom: 36;
 }
 
+.socials-list {
+  display: flex;
+  padding: 0;
+  margin: 36px 0;
+  list-style: none;
+}
+
+.socials-item {
+  width: 48px;
+  height: 48px;
+  margin-right: 6px;
+  background-color: var(--blue);
+  vertical-align: center; /* Выравнивание не получилось. Пробовала еще justify-content и align-items */
+}
+
+.socials-item:last-child {
+  margin-right: 0;
+}
+
+
 .copyright {
   border: 5px solid skyblue;
   justify-self: center;
@@ -575,7 +631,6 @@ container-traveling-form img {
 .sorting {
   border: 5px solid greenyellow;
   display: flex;
-  margin-left: 236px;
   margin-top: 31px;
   margin-bottom: 36px;
   padding: 0;
@@ -585,12 +640,11 @@ container-traveling-form img {
   display: flex;
   width: 240px;
   justify-content: space-between;
+  margin-left: 46px;
+  align-self: center;
+
 }
 
-.hotels-list {
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
-}
 
 .modal-form {
   display: flex;
@@ -617,4 +671,56 @@ container-traveling-form img {
   width: 458px;
   height: 58px;
   text-transform: uppercase;
+}
+
+.hotels-item {
+  display: flex;
+  flex-direction: row;
+  border: 5px solid fuchsia;
+  padding: 0;
+  margin: 0;
+}
+
+.column-image {
+  size: 135px 90px;
+  align-self: center;
+  margin-left: 73px;
+  padding: 0;
+
+  border: 5px solid green;
+}
+
+.column-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 29px;
+
+  border: 5px solid gray;
+}
+
+.column-rating {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-self: flex-start;
+
+  border: 5px solid pink;
+
+}
+
+.column-book {
+  display: flex;
+  width: 258px;
+  height: 27px;
+}
+
+.sorting-found {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  padding: 0;
+  marging-left: 73px;
+  margin-top: 29px;
+  margin-bottom: 31px;
+  color: var(--basic-black);
 }
