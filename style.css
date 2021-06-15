@@ -724,3 +724,10 @@ container-traveling-form img {
   margin-bottom: 31px;
   color: var(--basic-black);
 }
+
+.slider {
+  width: 316px;
+  height: 2px;
+  opacity: 0.3;
+  background: var(--basic-white);
+}
