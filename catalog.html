@@ -37,36 +37,54 @@
           <div class="parameters-item">
           <h3>Инфраструктура:</h3>
             <p>
-              <input type="checkbox" name="pool" id="pool" checked>
+              <input class="filter-parameter hidden" type="checkbox" name="pool" id="pool" checked >
               <label for="pool">Бассейн</label>
             </p>
             <p>
-              <input type="checkbox" name="parking" id="parking">
+              <input class="filter-parameter hidden" type="checkbox" name="parking" id="parking">
               <label for="parking">Парковка</label>
             </p>
             <p>
-              <input type="checkbox" name="wi-fi" id="wi-fi">
+              <input class="filter-parameter hidden" type="checkbox" name="wi-fi" id="wi-fi">
               <label for="wi-fi">WI-FI</label>
             </p>
             </div>
           <div class="parameters-item">
           <h3>Тип жилья:</h3>
             <p>
-              <input type="checkbox" name="hotel" id="hotel" checked>
+              <input class="filter-parameter hidden" type="checkbox" name="hotel" id="hotel" checked>
               <label for="hotel">Гостиница</label>
             </p>
             <p>
-              <input type="checkbox" name="motel" id="motel" checked>
+              <input class="filter-parameter hidden" type="checkbox" name="motel" id="motel" checked>
               <label for="motel">Мотель</label>
             </p>
             <p>
-              <input type="checkbox" name="apartment" id="apartment" checked>
+              <input class="filter-parameter hidden" type="checkbox" name="apartment" id="apartment" checked>
               <label for="apartment">Апартаменты</label>
             </p>
           </div>
-          <div class="parameters-item">
+          <div class="parameters-item parameters-item-price">
+
+
           <h3>Стоимость в сутки, ₽:</h3>
-          <input type="range" min="0" max="3000" step="1" class="slider"><br>
+            <div class="range-price">
+              <div class="min-price">
+                От 0
+              </div>
+              <div class="small-bar">
+              </div>
+              <div class="max-price">
+                До 3000
+              </div>
+            </div>
+            <div class="range-slider">
+              <div class="scale">
+                <div class="bar"></div>
+              </div>
+              <div class="toggle toggle-min"></div>
+              <div class="toggle toggle-max"></div>
+            </div>
           <button class="button-show" type="submit">Показать</button>
           </div>
           </fieldset>

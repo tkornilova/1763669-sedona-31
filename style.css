@@ -37,8 +37,18 @@ body {
   align-content: start;
 }
 
+
 .hidden {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .site-navigation {
@@ -46,7 +56,8 @@ body {
   justify-content: space-around;
   text-decoration: none;
   list-style: none;
-  margin: 0;
+  margin-top: 14px;
+  margin-bottom: 16px;
   padding: 0;
 }
 
@@ -56,7 +67,35 @@ body {
   font-size: 14px;
   line-height: 26px;
   background-color: transparent;
-  margin: 15px 0;
+}
+
+.site-navigation li:nth-child(1) {
+  width: 300px;
+  text-align: left;
+  padding-left: 73px;
+  box-sizing: border-box;
+}
+
+
+.site-navigation li:nth-child(2) {
+  width: 300px;
+  text-align: left;
+}
+
+.site-navigation li:nth-child(3) {
+  width: 300px;
+  text-align: right;
+}
+
+.site-navigation li:nth-child(4) {
+  width: 300px;
+  text-align: right;
+  padding-right: 72px;
+  box-sizing: border-box;
+}
+
+.site-navigation li:first-child {
+  left: 0;
 }
 
 .site-navigation a:hover,
@@ -73,13 +112,13 @@ body {
  color: var(--brown);
 }
 
-.main-header-logo {
+.main-header-logo img {
   position: absolute;
   margin: auto;
   left: 0;
   right: 0;
+  top: 0;
   width: 138px;
-
 }
 
 .main-navigation-wrapper {
@@ -94,6 +133,12 @@ body {
   padding-top: 74px;
 }
 
+.welcome {
+  margin-left: 340px;
+  margin-right: 340px;
+  min-height: 216px;
+  padding-top: 42px;
+}
 
 .caption-main {
   font-size: 21px;
@@ -102,6 +147,7 @@ body {
   color: var(--basic-black);
   background-color: transparent;
   text-align: center;
+  padding: 0;
 }
 
 .caption-reasons {
@@ -123,7 +169,6 @@ body {
   background-color: var(--blue);
   width: 400px;
   padding: 50px 50px;
-  border: 5px solid red;
   box-sizing: border-box;
 }
 
@@ -151,16 +196,17 @@ body {
   margin-bottom: 0;
 }
 
-.line-1-position-2 {
-  border: 5px solid green;
+.line-1-position-2 img {
+  display: block;
+  width: 800px;
 }
+
 
 .advantages-list {
   display: flex;
   margin: 0;
   padding: 0;
 
-  border: 5px solid brown;
 }
 
 .advantages-item {
@@ -174,8 +220,6 @@ body {
   padding-top: 160px;
   padding-bottom: 80px;
   box-sizing: border-box;
-
-  border: 5px solid yellowgreen;
 }
 
 .advantages-list h4 {
@@ -202,9 +246,9 @@ body {
   padding: 0;
 }
 
-.line-3-position-1 {
-  border: 5px solid green;
+.line-3-position-1 img{
   width: 800px;
+  display: block;
 }
 
 .line-3-position-2 {
@@ -212,8 +256,6 @@ body {
   padding: 50px 50px;
   width: 400px;
   box-sizing: border-box;
-
-  border: 5px solid red;
 }
 
 .line-3-position-2 h3 {
@@ -253,8 +295,6 @@ body {
   text-align: center;
   box-sizing: border-box;
   width: 400px;
-
-  border: 5px solid orangered;
 }
 
 .line-4-features-item h3 {
@@ -302,11 +342,12 @@ body {
   line-height: 26px;
   color: var(--basic-white);
   background-color: var(--brown);
-  padding-left: 125px;
-  padding-right: 125px;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  display: inline-block;
+  width: 568px;
+  height: 86px;
+  display: block;
+  padding: 30px 125px;
+  box-sizing: border-box;
+  margin: 0 auto;
 }
 
 .button-find-hotel:hover,
@@ -318,8 +359,8 @@ body {
   background-color: var(--deepest-brown);
   opacity: 0.3;
 }
-container-traveling-form img {
-  padding: 0;
+.container-traveling-form img {
+  display: block ;
 }
 
 .modal label {
@@ -382,8 +423,8 @@ container-traveling-form img {
   padding-top: 12px;
   padding-left: 70px;
   padding-bottom: 32px;
-  border: 5px solid tomato;
 }
+
 
 .parameters h3 {
   font-size: 14px;
@@ -400,18 +441,49 @@ container-traveling-form img {
   line-height: 21px;
   color: var(--basic-white);
   background-color: transparent;
+  margin-left: 39px;
   text-align: left;
+  cursor: pointer;
+  position: relative;
 }
 
- /* Не получается сделать прозрачную кнопку */
- .button-show{
+.filter-parameter + label::before {
+  content: "";
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  border: 2px solid var(--basic-white);
+  border-radius: 2px;
+  top: -3px;
+  left: -40px;
+  box-sizing: border-box;
+
+}
+
+.filter-parameter:checked + label::after {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 17px;
+  top: -2px;
+  left: -37px;
+  background-image: url(img/check.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.button-show{
   border: 2px solid var(--basic-white);
   font-size: 14px;
   font-weight: 700;
   line-height: 21px;
   color: var(--basic-white);
   background-color: transparent;
-  text-align: left;
+  display: inline-block;
+  width: 137px;
+  height: 36px;
+  align-self: center;
+  cursor: pointer;
  }
 
  .sorting-list {
@@ -524,6 +596,11 @@ container-traveling-form img {
   color: var(--basic-white);
   background-color: var(--blue);
   text-align: center;
+  display: inline-block;  /* Почему-то кнопки уехали((( */
+  width: 142px;
+  height: 27px;
+  align-self: center;
+  cursor: pointer;
  }
 
  .button-details:hover,
@@ -546,6 +623,11 @@ container-traveling-form img {
   color: var(--basic-white);
   background-color: var(--brown);
   text-align: center;
+  display: inline-block; /* Почему-то кнопки уехали((( */
+  width: 110px;
+  height: 27px;
+  align-self: center;
+  cursor: pointer;
  }
 
  .button-book:hover,
@@ -560,13 +642,7 @@ container-traveling-form img {
   opacity: 0.3;
  }
 
- .main-header {
-   border: 5px solid red;
- }
 
- .container {
-  border: 5px solid blueviolet;
-}
 
 .main-footer {
   border: 5px solid greenyellow;
@@ -591,8 +667,12 @@ container-traveling-form img {
   margin-bottom: 36;
 }
 
+
 .socials-list {
   display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 150px;
   padding: 0;
   margin: 36px 0;
   list-style: none;
@@ -601,18 +681,27 @@ container-traveling-form img {
 .socials-item {
   width: 48px;
   height: 48px;
-  margin-right: 6px;
   background-color: var(--blue);
-  vertical-align: center; /* Выравнивание не получилось. Пробовала еще justify-content и align-items */
 }
 
-.socials-item:last-child {
-  margin-right: 0;
+
+.socials-item:hover,
+.socials-item:focus {
+  background-color: var(--deeper-blue);
 }
 
+.socials-item:active {
+  background-color: var(--deepest-blue);
+  opacity: 0.3;
+}
+
+/* Не получается выровнять картинки на соц. кнопках */
+.socials-item img {
+  display: inline;
+  margin: auto auto;
+}
 
 .copyright {
-  border: 5px solid skyblue;
   justify-self: center;
   width: 327;
   margin-top: 43;
@@ -621,7 +710,6 @@ container-traveling-form img {
 
 
 .container-parameters {
-  border: 5px solid blue;
   height: 217px;
   padding: 0;
   margin: 0;
@@ -629,7 +717,6 @@ container-traveling-form img {
 
 /* Слово СОРТИРОВКА расположено немного выше остальных*/
 .sorting {
-  border: 5px solid greenyellow;
   display: flex;
   margin-top: 31px;
   margin-bottom: 36px;
@@ -659,23 +746,49 @@ container-traveling-form img {
 .booking-date-in {
   margin-top: 55px;
   text-align: center;
+  display: flex;
+  width: 458px;
 }
 
 .booking-date-out {
   margin-top: 29px;
   text-align: center;
+  display: flex;
+  width: 458px;
 }
+
+.booking-date-in input,
+.booking-date-out input {
+  width: 346px;
+  height: 38px;
+  background-color: var(--extra-light-gray);
+  border: none;
+  padding-right: 218px;
+  padding-left: 12px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  box-sizing: border-box;
+}
+
+.booking-date-in label {
+
+
+}
+
 
 .button-find {
   margin-top: 54px;
   width: 458px;
   height: 58px;
   text-transform: uppercase;
+  border: none;
 }
 
 .hotels-item {
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
+  align-content: center;
   border: 5px solid fuchsia;
   padding: 0;
   margin: 0;
@@ -694,6 +807,8 @@ container-traveling-form img {
   display: flex;
   flex-direction: column;
   margin-left: 29px;
+  width: 780px;
+  justify-content: stretch;
 
   border: 5px solid gray;
 }
@@ -701,8 +816,9 @@ container-traveling-form img {
 .column-rating {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  align-self: flex-start;
+  justify-self: flex-end;
+  width: 112px;
+  margin-right: 71px;
 
   border: 5px solid pink;
 
@@ -730,4 +846,33 @@ container-traveling-form img {
   height: 2px;
   opacity: 0.3;
   background: var(--basic-white);
+}
+
+.range-price {
+  width: 317px;
+  height: 36px;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center; /* Почему не сработало? */
+  border: 2px solid var(--basic-white);
+  border-radius: 2px;
+  position: relative;
+}
+
+
+.range-slider {
+  width: 316px;
+}
+
+.scale {
+  height: 2px;
+  color: var(--basic-white);
+  opacity: 0.3;
+  margin-top: 20px;
+}
+
+.parameters-item-price {
+  justify-self: center;
 }
