@@ -13,6 +13,7 @@
   --gray: #666666;
   --beige: #E5E5E5;
   --dark-beige: #EBEBEB;
+  --color-triangle: #CACACA;
 }
 
 .page {
@@ -220,8 +221,8 @@ body {
   width: 400px;
   padding-left: 50px;
   padding-right: 50px;
-  padding-top: 55px;
-  padding-bottom: 72px;
+  padding-top: 160px;
+  padding-bottom: 82px;
   box-sizing: border-box;
 }
 .advantages-item img {
@@ -234,6 +235,7 @@ body {
   line-height: 21px;
   margin: 0;
   padding-bottom: 25px;
+  position: relative;
 }
 
 .advantages-list p {
@@ -244,6 +246,38 @@ body {
   margin: 0;
   padding: 0;
 }
+
+.advantages-item-housing h4::before {
+  content: url(img/icon-house.svg);
+  width: 75px;
+  height: 72px;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 70px;
+  left: 112px;
+}
+
+.advantages-item-food h4::before {
+  content: url(img/icon-burger.svg);
+  width: 75px;
+  height: 70px;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 70px;
+  left: 112px;
+}
+
+.advantages-item-gifts h4::before {
+  content: url(img/icon-gift.svg);
+  width: 64px;
+  height: 74px;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 70px;
+  left: 119px;
+}
+
+
 
 .line-3 {
   display: flex;
@@ -413,6 +447,21 @@ body {
   color: var(--basic-black);
   background-color: transparent;
   text-align: center;
+}
+
+.copyright-logo path {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.copyright-logo:hover path,
+.copyright-logo:focus path {
+  fill: var(--blue);
+  filter: none;
+}
+
+.copyright-logo:active path {
+  fill: var(--dark-beige);
+  filter: none;
 }
 
 .parameters {
@@ -741,6 +790,38 @@ body {
   padding: 0;
 }
 
+.sorting-list::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 10px solid var(--color-triangle);
+  position: absolute;
+  left: 1100px;
+}
+
+.sorting-list::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 10px solid var(--color-triangle);
+  position: absolute;
+  left: 1100px;
+
+}
+
+.sorting-list::after:hover,
+.sorting-list::after:focus {
+  border: var(--basic-black);  /* Не работает цвет */
+}
+
+.sorting-list::after:active {
+  border: var(--blue);  /* Не работает цвет */
+}
+
 
 .modal-form {
   display: flex;
@@ -779,8 +860,22 @@ body {
   padding-top: 6px;
   padding-bottom: 6px;
   box-sizing: border-box;
+  position: relative;
 }
 
+.icon-calendar {
+  position: absolute;
+  right: 575px; /* Не разобралась как выровнять по высоте */
+}
+
+.icon-calendar:hover path,
+.icon-calendar:focus path {
+  fill: var(--basic-black);
+}
+
+.icon-calendar:active path {
+  fill: var(--blue);
+}
 
 
 .booking-date-in input:hover,
