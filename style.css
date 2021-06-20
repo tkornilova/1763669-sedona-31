@@ -12,6 +12,7 @@
   --extra-light-gray: #F2F2F2;
   --gray: #666666;
   --beige: #E5E5E5;
+  --dark-beige: #EBEBEB;
 }
 
 .page {
@@ -126,8 +127,10 @@ body {
 }
 
 .container-background {
-  background: url(img/background-main.jpg) var(--gray) no-repeat scroll;
+  background:
+    url(img/background-main.jpg) var(--gray) no-repeat scroll;
   background-size: cover;
+  width: 1200px;
   height: 509px;
   text-align: center;
   padding-top: 74px;
@@ -217,9 +220,12 @@ body {
   width: 400px;
   padding-left: 50px;
   padding-right: 50px;
-  padding-top: 160px;
-  padding-bottom: 80px;
+  padding-top: 55px;
+  padding-bottom: 72px;
   box-sizing: border-box;
+}
+.advantages-item img {
+  margin-bottom: 28px;
 }
 
 .advantages-list h4 {
@@ -472,10 +478,11 @@ body {
   background-position: 0 0;
 }
 
-.button-show{
+.button-show {
   border: 2px solid var(--basic-white);
+  border-radius: 2px;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 21px;
   color: var(--basic-white);
   background-color: transparent;
@@ -486,16 +493,19 @@ body {
   cursor: pointer;
  }
 
- .sorting-list {
-  list-style-type: none;
+ .button-show:hover,
+ .button-show:focus {
+   background-color: var(--basic-white);
+   color: var(--basic-black);
  }
 
  .sorting-title {
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
-  color: var(--basic-black);;
+  color: var(--basic-black);
   background-color: transparent;
+  margin-left: 46px;
  }
 
  .sorting-item a {
@@ -540,7 +550,6 @@ body {
 
  .hotels-item  a {
   text-decoration: none;
-  height: 150px;
 }
 
  .hotel-name {
@@ -596,10 +605,10 @@ body {
   color: var(--basic-white);
   background-color: var(--blue);
   text-align: center;
-  display: inline-block;  /* Почему-то кнопки уехали((( */
-  width: 142px;
+  display: block;
+  width: 110px;
   height: 27px;
-  align-self: center;
+  align-self: center; /* Не выровнялось по высоте */
   cursor: pointer;
  }
 
@@ -623,10 +632,10 @@ body {
   color: var(--basic-white);
   background-color: var(--brown);
   text-align: center;
-  display: inline-block; /* Почему-то кнопки уехали((( */
-  width: 110px;
+  display: block;
+  width: 142px;
   height: 27px;
-  align-self: center;
+  align-self: center; /* Не выровнялось по высоте */
   cursor: pointer;
  }
 
@@ -678,28 +687,26 @@ body {
   list-style: none;
 }
 
-.socials-item {
+.button-socials {
   width: 48px;
   height: 48px;
   background-color: var(--blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
-.socials-item:hover,
-.socials-item:focus {
+.button-socials:hover,
+.button-socials:focus {
   background-color: var(--deeper-blue);
 }
 
-.socials-item:active {
+.button-socials:active {
   background-color: var(--deepest-blue);
   opacity: 0.3;
 }
 
-/* Не получается выровнять картинки на соц. кнопках */
-.socials-item img {
-  display: inline;
-  margin: auto auto;
-}
 
 .copyright {
   justify-self: center;
@@ -718,18 +725,20 @@ body {
 /* Слово СОРТИРОВКА расположено немного выше остальных*/
 .sorting {
   display: flex;
-  margin-top: 31px;
-  margin-bottom: 36px;
+  width: 1200;
+  height: 86px;
   padding: 0;
+  align-items: center;
 }
 
 .sorting-list {
   display: flex;
-  width: 240px;
+  width: 239px;
   justify-content: space-between;
-  margin-left: 46px;
-  align-self: center;
-
+  margin-left: 40px;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
 }
 
 
@@ -739,8 +748,9 @@ body {
   justify-content: center;
   margin: 0 auto;
   width: 568px;
+  height: 395px;
+  box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
 
-  border: 5px solid royalblue;
 }
 
 .booking-date-in {
@@ -761,6 +771,7 @@ body {
 .booking-date-out input {
   width: 346px;
   height: 38px;
+  font-weight: bold;
   background-color: var(--extra-light-gray);
   border: none;
   padding-right: 218px;
@@ -770,10 +781,21 @@ body {
   box-sizing: border-box;
 }
 
-.booking-date-in label {
 
 
+.booking-date-in input:hover,
+.booking-date-in input:focus,
+.booking-date-out input:hover,
+.booking-date-out input:focus {
+  background-color: var(--dark-beige);
 }
+
+.booking-date-in input:active,
+.booking-date-out input:active {
+  background-color: var(--basic-white);
+  border: 2px solid var(--beige);
+}
+
 
 
 .button-find {
@@ -788,7 +810,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-content: center;
+  align-items: center;
   border: 5px solid fuchsia;
   padding: 0;
   margin: 0;
@@ -807,7 +829,6 @@ body {
   display: flex;
   flex-direction: column;
   margin-left: 29px;
-  width: 780px;
   justify-content: stretch;
 
   border: 5px solid gray;
@@ -816,7 +837,7 @@ body {
 .column-rating {
   display: flex;
   flex-direction: column;
-  justify-self: flex-end;
+  justify-self: flex-end; /* Не сработало? */
   width: 112px;
   margin-right: 71px;
 
@@ -826,8 +847,11 @@ body {
 
 .column-book {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   width: 258px;
   height: 27px;
+
 }
 
 .sorting-found {
@@ -835,7 +859,7 @@ body {
   line-height: 26px;
   font-weight: 700;
   padding: 0;
-  marging-left: 73px;
+  margin-left: 73px;
   margin-top: 29px;
   margin-bottom: 31px;
   color: var(--basic-black);
