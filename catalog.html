@@ -64,29 +64,34 @@
               <label for="apartment">Апартаменты</label>
             </p>
           </div>
+
+
+
           <div class="parameters-item parameters-item-price">
-
-
           <h3>Стоимость в сутки, ₽:</h3>
-            <div class="range-price">
-              <div class="min-price">
-                От 0
-              <div class="max-price">
-                До 3000
-              </div>
+          <div class="price">
+            <div class="min-price">
+              <label>От</label>
+              <input type="text" name="min-price" id="min-price" value="0">
             </div>
-            <div class="range-slider">
-              <div class="scale">
-                <div class="bar"></div>
-              </div>
-              <div class="toggle toggle-min"></div>
-              <div class="toggle toggle-max"></div>
+            <div class="max-price">
+              <label>До</label>
+              <input type="text" name="max-price" id="max-price" value="3000">
             </div>
-          <button class="button-show" type="submit">Показать</button>
           </div>
+          <div class="range-slider">
+            <div class="scale">
+                <div class="bar"></div>
+            </div>
+            <div class="toggle toggle-min"></div>
+            <div class="toggle toggle-max"></div>
+          </div>
+          <button class="button-show" type="submit">Показать</button>
           </fieldset>
           </form>
       </section>
+
+
       <section class="container-sorting">
         <h2 class="hidden">Data sorting</h2>
         <div class="sorting">
@@ -188,7 +193,7 @@
   </main>
 
   <footer>
-    <div class="inner-footer">
+    <div class="main-footer main-footer-catalog">
       <section class="contacts">
         <h3 class="hidden">Phone number</h3>
           <p>

@@ -14,12 +14,11 @@
   --beige: #E5E5E5;
   --dark-beige: #EBEBEB;
   --color-triangle: #CACACA;
-  --page: #888888;
+  --toggle: #ABABAB;
 }
 
 .page {
   height: 100%;
-  background-color: var(--page);
 }
 
 body {
@@ -541,6 +540,11 @@ box-sizing: border-box;
   box-sizing: border-box;
 }
 
+.parameters-item p {
+  margin: 0;
+  padding-bottom: 25px;
+}
+
 .parameters h3 {
   font-size: 14px;
   font-weight: 700;
@@ -550,6 +554,11 @@ box-sizing: border-box;
   text-align: left;
   padding-bottom: 24px;
   margin: 0;
+}
+
+.parameters h3:nth-child(3) {
+  padding-bottom: 10px;
+  align-self: flex-start;
 }
 
 .parameters label {
@@ -565,7 +574,7 @@ box-sizing: border-box;
   position: relative;
 }
 
-.filter-parameter + label::before {
+.filter-parameter + label::after {
   content: "";
   position: absolute;
   width: 23px;
@@ -591,6 +600,7 @@ box-sizing: border-box;
   background-color: transparent;
 }
 
+
 .button-show {
   border: 2px solid var(--basic-white);
   border-radius: 2px;
@@ -604,7 +614,7 @@ box-sizing: border-box;
   height: 36px;
   align-self: center;
   cursor: pointer;
-  margin-top: 0px;
+  margin-top: 55px;
 }
 
 .button-show:hover,
@@ -712,7 +722,9 @@ box-sizing: border-box;
   line-height: 21px;
   color: var(--gray);
   background-color: var(--extra-light-gray);
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 110px;
   height: 27px;
 }
@@ -779,39 +791,30 @@ box-sizing: border-box;
   background-image: url(img/map.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
 }
 
 .main-footer-wrapper {
   height: 120px;
   background-color: rgba(255, 255, 255, 0.9);
-  margin-top: 474px;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
 }
 
-
-
-.main-footer,
-.inner-footer {
+.main-footer {
   display: flex;
   justify-content: space-between;
   width: 933px;
-  margin-top: 23px;
-  margin-bottom: 36px;
-  margin-left: 153px;
-  margin-right: 131px;
+  padding-left: 136px;
+  padding-right: 131px;
+  margin: 0;
 }
 
-.contacts {
-  justify-self: center;
-
-  border: royalblue 2px solid;
+.main-footer-catalog {
+  background-color: var(--basic-white);
 }
-
-.socials {
-  justify-self: center;
-
-  border: goldenrod 2px solid;
-}
-
 
 .socials-list {
   display: flex;
@@ -848,9 +851,6 @@ box-sizing: border-box;
   display: flex;
   justify-self: center;
   align-items: center;
-
-
-  border: turquoise 2px solid;
 }
 
 
@@ -871,21 +871,25 @@ box-sizing: border-box;
 
 .sorting-list {
   display: flex;
-  width: 239px;
-  justify-content: space-between;
+  width: 740px;
+  justify-content: flex-start;
   margin-left: 40px;
   align-items: center;
   list-style-type: none;
   padding: 0;
 }
-
-.icon-up,
-.icon-down {
-position: absolute;
+.sorting-list li {
+  padding-right: 32px;
 }
+
+.sorting-list li:last-child {
+  padding-right: 0;
+}
+
 
 .icon-up {
   right: 170px;
+  padding-right: 12px;
 }
 
 .icon-down {
@@ -961,6 +965,76 @@ position: absolute;
   position: relative;
 }
 
+.adults input,
+.children input {
+  width: 114px;
+  height: 38px;
+  font-weight: bold;
+  background-color: var(--extra-light-gray);
+  border: none;
+  box-sizing: border-box;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+}
+
+.icon-minus,
+.icon-plus {
+  position: absolute;
+
+}
+
+.icon-minus path:hover,
+.icon-minus path:focus,
+.icon-plus path:hover,
+.icon-plus path:focus {
+  fill: var(--basic-black);
+}
+
+.icon-minus path:active,
+.icon-plus path:active {
+  fill: var(--blue);
+}
+
+
+
+.icon-minus-adults {
+  left: 176px;
+  bottom: 187px;
+}
+
+.icon-minus-children {
+  left: 408px;
+  bottom: 187px;
+}
+
+.icon-plus-adults {
+  left: 251px;
+  bottom: 183px;
+}
+
+.icon-plus-children {
+  left: 482px;
+  bottom: 183px;
+}
+
+
+.number-of-people {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  margin-right: 8px;
+}
+
+.adults label {
+  margin-right: 40px;
+}
+
+.children label {
+  margin-right: 25px;
+}
+
 .icon-calendar {
   position: absolute;
   right: 70px;
@@ -1013,8 +1087,6 @@ position: absolute;
   align-items: center;
   margin-left: 73px;
   padding: 0;
-
-  border: 2px solid green;
 }
 
 .column-info {
@@ -1025,8 +1097,6 @@ position: absolute;
   margin-bottom: 30px;
   box-sizing: border-box;
   width: 900px;
-
-  border: 2px solid gray;
 }
 
 .column-rating {
@@ -1035,8 +1105,7 @@ position: absolute;
   justify-self: flex-end;
   width: 130px;
   margin-right: 71px;
-
-  border: 2px solid pink;
+  align-items: flex-end;
 
 }
 
@@ -1046,8 +1115,6 @@ position: absolute;
   gap: 6px;
   left: 0;
   width: 258px;
-
-  border: 2px solid olive;
 }
 
 .sorting-found {
@@ -1068,37 +1135,78 @@ position: absolute;
   background: var(--basic-white);
 }
 
-.range-price {
+.parameters-item-price {
+  width: 317px;
+  padding: 0;
+  margin-left: 208px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; /* Почему не сработало? */
+  position: relative;
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
   width: 317px;
   height: 36px;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: space-around;
-  align-items: center; /* Почему не сработало? */
   border: 2px solid var(--basic-white);
   border-radius: 2px;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.price input {
+  width: 90px;
+  color: var(--basic-white);
+  background-color: transparent;
+  border: none;
   position: relative;
 }
 
 
-.range-slider {
-  width: 316px;
+.min-price input::after {
+  width: 2px;
+  height: 22px;
+  background-color: var(--basic-white);
+  position: absolute;
 }
 
-.scale {
+
+
+.range-slider .scale {
+  width: 316px;
   height: 2px;
   background-color: var(--basic-white);
   opacity: 0.3;
   margin-top: 20px;
 }
 
-.parameters-item-price {
-  justify-self: center;
+.range-slider .bar {
+  height: 2px;
+  background-color: var(--basic-white);
+  opacity: 1;
+  width: 70%;
+  position: relative;
 }
 
-.inner-footer {
-  height: 120px;
-  background-color: rgba(255, 255, 255, 0.9);
-  display: flex;
+.toggle {
+  width: 4px;
+  height: 4px;
+  background-color: var(--toggle);
+  border: 8px solid var(--basic-white);
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 var(--toggler);
+  position: absolute;
+}
+
+.toggle-min {
+  left: 0px;
+  top: 92px;
+}
+
+.toggle-max {
+  left: 221px;
+  top: 92px;
 }
