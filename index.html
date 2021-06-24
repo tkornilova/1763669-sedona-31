@@ -168,7 +168,8 @@
       </section>
       <section class="copyright">
         <h3 class="hidden">Create by</h3>
-          <p>Website by<a href="https://htmlacademy.ru/intensive/htmlcss">
+          <p>Website by</p>
+          <a href="https://htmlacademy.ru/intensive/htmlcss">
             <svg class="copyright-logo" width="115" height="34" viewBox="0 0 115 34" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0)">
               <path d="M0 12.8806V15.4567H2.45789V12.8806H0Z" fill="black"/>
@@ -191,7 +192,6 @@
               </defs>
               </svg>
           </a>
-        </p>
       </section>
     </div>
     </div>
@@ -218,28 +218,32 @@
             </svg>
         </p>
         <div class="number-of-people">
-          <p class="adults">
-            <label for="date-out">Взрослые</label>
-            <input id="adults" type="text" name="adults" value="2">
-            <svg class="icon-minus icon-minus-adults" width="12" height="3" viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="12" height="3" fill="#A9A9A9"/>
-            </svg>
-            <svg class="icon-plus icon-plus-adults" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z" fill="#A9A9A9"/>
-            </svg>
-          </p>
-          <p class="children">
-            <label for="date-out">Дети</label>
-            <input id=children" type="text" name="adults" value="0">
-            <svg class="icon-minus icon-minus-children" width="12" height="3" viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="12" height="3" fill="#A9A9A9"/>
-            </svg>
-            <svg class="icon-plus icon-plus-children" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z" fill="#A9A9A9"/>
-            </svg>
-          </p>
+          <div class="adults">
+            <label for="adults">Взрослые</label>
+            <div class="range-adults">
+              <svg class="icon-minus icon-minus-adults" width="12" height="3" viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="12" height="3" fill="#A9A9A9"/>
+              </svg>
+              <input id="adults" type="text" name="adults" value="2">
+              <svg class="icon-plus" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z" fill="#A9A9A9"/>
+              </svg>
+            </div>
           </div>
-      <button class="button-find" type="submit">Найти</button>>
+          <div class="children">
+            <label for="children">Дети</label>
+            <div class="range-children">
+              <svg class="icon-minus" width="12" height="3" viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="12" height="3" fill="#A9A9A9"/>
+              </svg>
+              <input id="children" type="text" name="children" value="0">
+              <svg class="icon-plus icon-plus-children" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z" fill="#A9A9A9"/>
+              </svg>
+            </div>
+          </div>
+          </div>
+      <button class="button-find" type="submit">Найти</button>
       </form>
       </div>
   </section>

@@ -28,12 +28,16 @@
     </div>
   </header>
 
+
+
   <main class="container container-inner">
     <h1 class="hidden">Choose a hotel</h1>
       <section class="container-parameters">
         <h2 class="hidden">Parameters</h2>
-          <form method="get" action="https://echo.htmlacademy.ru">
-          <fieldset class="parameters">
+        <div class="parameters-wrapper">
+          <form class="parameters" method="get" action="https://echo.htmlacademy.ru">
+          <fieldset>
+          <div class="parameters-form">
           <div class="parameters-item">
           <h3>Инфраструктура:</h3>
             <p>
@@ -48,7 +52,7 @@
               <input class="filter-parameter hidden" type="checkbox" name="wi-fi" id="wi-fi">
               <label for="wi-fi">WI-FI</label>
             </p>
-            </div>
+          </div>
           <div class="parameters-item">
           <h3>Тип жилья:</h3>
             <p>
@@ -64,9 +68,6 @@
               <label for="apartment">Апартаменты</label>
             </p>
           </div>
-
-
-
           <div class="parameters-item parameters-item-price">
           <h3>Стоимость в сутки, ₽:</h3>
           <div class="price">
@@ -87,9 +88,16 @@
             <div class="toggle toggle-max"></div>
           </div>
           <button class="button-show" type="submit">Показать</button>
+          </div>
+          </div>
           </fieldset>
           </form>
+        </div>
       </section>
+
+
+
+
 
 
       <section class="container-sorting">
