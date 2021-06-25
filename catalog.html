@@ -22,7 +22,7 @@
           <li><a href="blank.html">Информация</a></li>
           <li><a href="blank.html">Фото и видео</a></li>
           <li><a href="blank.html">Карта штата</a></li>
-          <li><a href="catalog.html" class="current-page">Гостиницы</a></li>
+          <li><a class="current-page">Гостиницы</a></li>
         </ul>
       </nav>
     </div>
@@ -34,11 +34,9 @@
     <h1 class="hidden">Choose a hotel</h1>
       <section class="container-parameters">
         <h2 class="hidden">Parameters</h2>
-        <div class="parameters-wrapper">
           <form class="parameters" method="get" action="https://echo.htmlacademy.ru">
-          <fieldset>
-          <div class="parameters-form">
-          <div class="parameters-item">
+          <fieldset class="parameters-form">
+          <div class="parameters-item parameters-item-infrastructure">
           <h3>Инфраструктура:</h3>
             <p>
               <input class="filter-parameter hidden" type="checkbox" name="pool" id="pool" checked >
@@ -53,7 +51,7 @@
               <label for="wi-fi">WI-FI</label>
             </p>
           </div>
-          <div class="parameters-item">
+          <div class="parameters-item parameters-item-housing">
           <h3>Тип жилья:</h3>
             <p>
               <input class="filter-parameter hidden" type="checkbox" name="hotel" id="hotel" checked>
@@ -89,10 +87,8 @@
           </div>
           <button class="button-show" type="submit">Показать</button>
           </div>
-          </div>
           </fieldset>
           </form>
-        </div>
       </section>
 
 
@@ -106,7 +102,7 @@
           <p class='sorting-found'>Найдено: 3</p>
           <p class="sorting-title">Сортировка</p>
           <ul class="sorting-list">
-            <li class="sorting-item current-sorting"><a href="#">По цене</a></li>
+            <li class="sorting-item current-sorting"><a>По цене</a></li>
             <li class="sorting-item"><a href="#">По типу</a></li>
             <li class="sorting-item"><a href="#">По рейтингу</a></li>
           </ul>
@@ -231,7 +227,8 @@
       </section>
       <section class="copyright">
         <h3 class="hidden">Create by</h3>
-          <p>Website by<a href="https://htmlacademy.ru/intensive/htmlcss">
+          <p>Website by</p>
+          <a href="https://htmlacademy.ru/intensive/htmlcss">
             <svg class="copyright-logo" width="115" height="34" viewBox="0 0 115 34" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0)">
               <path d="M0 12.8806V15.4567H2.45789V12.8806H0Z" fill="black"/>
@@ -254,7 +251,6 @@
               </defs>
               </svg>
           </a>
-        </p>
       </section>
     </div>
   </footer>
