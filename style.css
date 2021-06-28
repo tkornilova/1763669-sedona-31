@@ -781,6 +781,10 @@ box-sizing: border-box;
   color: var(--basic-black);
 }
 
+.range-slider {
+  position: relative;
+}
+
 .scale {
   width: 316px;
   height: 2px;
@@ -792,14 +796,14 @@ box-sizing: border-box;
 .scale .bar-range {
   height: 2px;
   background-color: var(--basic-white);
-  width: 250px;
+  width: 260px;
 }
 
 .scale .bar-left {
   height: 2px;
-  background-color: var(--basic-white));
+  background-color: var(--basic-white);
   opacity: 0.3;
-  width: 66px;
+  width: 56px;
 }
 
 .toggle {
@@ -809,16 +813,16 @@ box-sizing: border-box;
   border: 8px solid var(--basic-white);
   border-radius: 50%;
   box-shadow: 0 2px 1px 0 var(--toggler);
+  position: absolute;
 }
 
 .toggle-min {
-  left: 0px;
-  top: 92px;
+  top: 11px;
 }
 
 .toggle-max {
-  left: 221px;
-  top: 92px;
+  left: 255px;
+  top: 11px;
 }
 
 /* Sorting */
@@ -829,7 +833,7 @@ box-sizing: border-box;
   align-items: center;
   position: relative;
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 32px;
   padding-left: 73px;
   padding-right: 73px;
   box-sizing: border-box;
