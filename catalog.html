@@ -7,7 +7,7 @@
   <link rel="icon" href="favicon.ico" type="image/svg+xml">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=latin,cyrillic;display=swap">
   <link href="normalize.css" rel="stylesheet">
-  <link href="style.css" rel="stylesheet">
+  <link href="styles/style.min.css" rel="stylesheet">
 </head>
 
 <body class="page-body">
@@ -70,11 +70,11 @@
           <h3>Стоимость в сутки, ₽:</h3>
           <div class="price">
             <div class="min-price">
-              <label>От</label>
+              <label for="min-price">От</label>
               <input type="text" name="min-price" id="min-price" value="0">
             </div>
             <div class="max-price">
-              <label>До</label>
+              <label for="max-price">До</label>
               <input type="text" name="max-price" id="max-price" value="3000">
             </div>
           </div>
@@ -107,10 +107,10 @@
             <li class="sorting-item"><a href="#">По типу</a></li>
             <li class="sorting-item"><a href="#">По рейтингу</a></li>
           </ul>
-          <svg class="icon-up" width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg class="icon-up" aria-hidden="true" focusable="false" width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA"/>
           </svg>
-          <svg class="icon-down" width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg class="icon-down" aria-hidden="true" focusable="false" width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M5.5 10L0 0H11" fill="#81B3D2"/>
           </svg>
 
@@ -125,7 +125,7 @@
                 <h3><a href="#" class="hotel-name">Amara Resort & Spa</a></h3>
                   <div class="column-price">
                     <p>Гостиница</p>
-                    <p>От 4000₽</p>
+                    <p>От 4000 ₽</p>
                   </div>
                   <div class="column-book">
                     <a class="button-details" href="#">Подробнее</a>
@@ -150,7 +150,7 @@
                 <h3><a href="#" class="hotel-name">Desert Quail Inn</a></h3>
                   <div class="column-price">
                     <p>Мотель</p>
-                    <p>От 3000₽</p>
+                    <p>От 3000 ₽</p>
                   </div>
                   <div class="column-book">
                     <a class="button-details" href="#">Подробнее</a>
@@ -178,7 +178,7 @@
                 <h3><a href="#" class="hotel-name">Villas at Poco Diablo</a></h3>
                   <div class="column-price">
                     <p>Апартаменты</p>
-                    <p>От 3000₽</p>
+                    <p>От 3000 ₽</p>
                   </div>
                   <div class="column-book">
                     <a class="button-details" href="#">Подробнее</a>
@@ -230,7 +230,7 @@
         <h3 class="hidden">Create by</h3>
           <p>Website by</p>
           <a href="https://htmlacademy.ru/intensive/htmlcss">
-            <svg class="copyright-logo" width="115" height="34" viewBox="0 0 115 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="copyright-logo" aria-hidden="true" focusable="false" width="115" height="34" viewBox="0 0 115 34" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0)">
               <path d="M0 12.8806V15.4567H2.45789V12.8806H0Z" fill="black"/>
               <path d="M11.6466 4.52965C10.0863 4.52965 8.82534 5.23807 8.03454 6.26851H7.94905V0H5.91864V15.4566H7.94905V10.1541C7.94905 8.02886 9.27418 6.50466 11.2191 6.50466C13.0572 6.50466 14.1258 7.87858 14.1258 9.72478V15.4566H16.1563V9.35984C16.1563 6.41878 14.3396 4.52965 11.6466 4.52965Z" fill="black"/>
