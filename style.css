@@ -499,6 +499,8 @@ body {
 }
 
 .main-footer {
+  width: 1200px;
+  box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -519,7 +521,7 @@ body {
   width: 150px;
   padding-top: 0;
   padding-bottom: 5px;
-  padding-left: 35px;
+  padding-left: 15px;
   margin-top: 36px;
   margin-bottom: 36px;
   list-style: none;
@@ -548,8 +550,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 10px;
-  padding-left: 20px;
 }
 
 .contacts {
@@ -561,9 +561,9 @@ body {
   font-weight: 700;
   line-height: 26px;
   color: var(--basic-black);
-  padding-bottom: 20px;
   background-color: transparent;
   text-align: center;
+  padding-bottom: 12px;
 }
 
 .contacts p {
@@ -861,6 +861,17 @@ body {
   top: 11px;
 }
 
+.toggle:hover,
+.toggle:focus {
+  width: 4px;
+  height: 4px;
+  background-color: var(--toggle);
+  border: 10px solid var(--basic-white);
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 var(--toggler);
+  position: absolute;
+}
+
 /* Sorting */
 
 .sorting {
@@ -921,7 +932,7 @@ body {
   color: var(--basic-black);
   opacity: 0.3;
   background-color: transparent;
-  text-decoration: underline dotted var(--blue);
+  text-decoration: underline 1px dashed var(--blue);
 }
 
 .current-sorting {
@@ -1159,8 +1170,7 @@ body {
 
 .modal {
 position: fixed;
-display: none;
-bottom: 199px;
+bottom: 203px;
 right: 0;
 left: 0;
 margin: 0 auto;
@@ -1171,7 +1181,7 @@ margin: 0 auto;
   flex-direction: row;
   justify-content: center;
   margin: 0 auto;
-  padding: 55px 55px;
+  padding: 53px 55px;
   width: 568px;
   box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
   box-sizing: border-box;
@@ -1216,14 +1226,15 @@ margin: 0 auto;
 
 .booking-date-in input,
 .booking-date-out input {
-  width: 346px;
+  width: 426px;
   height: 38px;
+  text-transform: uppercase;
   font-weight: bold;
   background-color: var(--extra-light-gray);
   border: none;
   box-sizing: border-box;
   position: relative;
-  padding-left: 12px;
+  padding-left: 11px;
   box-sizing: border-box;
 }
 
@@ -1242,8 +1253,8 @@ margin: 0 auto;
 
 .icon-calendar {
   position: absolute;
-  right: 16px;
-  top: 4px;
+  right: 10px;
+  top: 6px;
 }
 
 .icon-calendar:hover path,
@@ -1272,13 +1283,13 @@ margin: 0 auto;
 }
 
 .children label {
-  padding-left: 40px;
+  padding-left: 50px;
   box-sizing: border-box;
 }
 
 .range-adults,
 .range-children {
-  width: 114px;
+  width: 150px;
   height: 38px;
   font-weight: bold;
   background-color: var(--extra-light-gray);
@@ -1295,27 +1306,30 @@ margin: 0 auto;
   background-color: var(--extra-light-gray);
   text-align: center;
   font-weight: bold;
+  padding: 0;
+  margin: 0;
 }
 
-.icon-minus {
-  margin-left: 13px;
-  box-sizing: border-box;
+.button-icon {
+  width: 40px;
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: var(--extra-light-gray);
 }
 
-.icon-plus {
-  margin-right: 14px;
-  box-sizing: border-box;
-}
 
-.icon-minus rect:hover,
-.icon-minus rect:focus,
-.icon-plus path:hover,
-.icon-plus path:focus {
+.button-icon:hover rect,
+.button-icon:focus rect,
+.button-icon:hover path,
+.button-icon:focus path {
   fill: var(--basic-black);
 }
 
-.icon-minus rect:active,
-.icon-plus path:active {
+.button-icon:active rect,
+.button-icon:active path {
   fill: var(--blue);
 }
 
