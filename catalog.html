@@ -15,13 +15,13 @@
   <header class="main-header">
     <div class="main-navigation-wrapper">
       <nav class="main-navigation">
-        <a class="main-header-logo" href="index.html">
+        <a class="main-header-logo" href="index.html" aria-label="Переход на главную страницу">
           <img src="img/logo-sedona.svg" width="138" height="70" alt="Логотип сайта городка Седона">
         </a>
         <ul class="site-navigation">
-          <li><a href="blank.html">Информация</a></li>
-          <li><a href="blank.html">Фото и видео</a></li>
-          <li><a href="blank.html">Карта штата</a></li>
+          <li><a href="blank.html" aria-label="Переход в раздел Информация">Информация</a></li>
+          <li><a href="blank.html" aria-label="Переход в раздел Фото и видео">Фото и видео</a></li>
+          <li><a href="blank.html" aria-label="Переход в раздел Карта штата">Карта штата</a></li>
           <li><a class="current-page">Гостиницы</a></li>
         </ul>
       </nav>
@@ -86,7 +86,7 @@
             <div class="toggle toggle-min"></div>
             <div class="toggle toggle-max"></div>
           </div>
-          <button class="button-show" type="submit">Показать</button>
+          <button class="button-show" type="submit" aria-label="Показать доступные отели">Показать</button>
           </div>
           </fieldset>
           </form>
@@ -103,9 +103,9 @@
           <p class='sorting-found'>Найдено: 3</p>
           <p class="sorting-title">Сортировка</p>
           <ul class="sorting-list">
-            <li class="sorting-item current-sorting"><a>По цене</a></li>
-            <li class="sorting-item"><a href="#">По типу</a></li>
-            <li class="sorting-item"><a href="#">По рейтингу</a></li>
+            <li class="sorting-item current-sorting"><a aria-label="Сортировка по цене">По цене</a></li>
+            <li class="sorting-item"><a href="#" aria-label="Сортировка по типу">По типу</a></li>
+            <li class="sorting-item"><a href="#" aria-label="Сортировка по рейтингу">По рейтингу</a></li>
           </ul>
           <svg class="icon-up" aria-hidden="true" focusable="false" width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA"/>
@@ -128,8 +128,8 @@
                     <p>От 4000 ₽</p>
                   </div>
                   <div class="column-book">
-                    <a class="button-details" href="#">Подробнее</a>
-                    <a class="button-book" href="#">Забронировать</a>
+                    <a class="button-details" href="#" aria-label="Подробнее о гостинице Amara Resort & Spa">Подробнее</a>
+                    <a class="button-book" href="#" aria-label="Забронировать гостиницу Amara Resort & Spa">Забронировать</a>
                   </div>
               </div>
               <div class="column-rating">
@@ -153,8 +153,8 @@
                     <p>От 3000 ₽</p>
                   </div>
                   <div class="column-book">
-                    <a class="button-details" href="#">Подробнее</a>
-                    <a class="button-book" href="#">Забронировать</a>
+                    <a class="button-details" href="#" aria-label="Подробнее о мотеле Desert Quail Inn">Подробнее</a>
+                    <a class="button-book" href="#" aria-label="Забронировать мотель Desert Quail Inn">Забронировать</a>
                   </div>
               </div>
               <div class="column-rating">
@@ -181,8 +181,8 @@
                     <p>От 3000 ₽</p>
                   </div>
                   <div class="column-book">
-                    <a class="button-details" href="#">Подробнее</a>
-                    <a class="button-book" href="#">Забронировать</a>
+                    <a class="button-details" href="#" aria-label="Подробнее об апартаментах Villas at Poco Diablo">Подробнее</a>
+                    <a class="button-book" href="#" aria-label="Забронировать апартаменты Villas at Poco Diablo">Забронировать</a>
                   </div>
               </div>
               <div class="column-rating">
@@ -204,22 +204,25 @@
           <p>
             #visitSEDONA
           </p>
-          <a class="contacts-phone" href="tel:88005558628">+7 800 555-86-28</a>
+          <a class="contacts-phone" href="tel:88005558628" aria-label="Телефон сайта">+7 800 555-86-28</a>
       </section>
       <section class="socials">
         <h3 class="hidden">Social networks</h3>
           <ul class="socials-list">
             <li class="socials-item">
+              <span class="hidden">Twitter</span>
               <a class="button-socials" href="#">
                 <img src="img/icon-twitter.svg" width="17" height="17" alt="Twitter сайта">
               </a>
             </li>
             <li class="socials-item">
+              <span class="hidden">Facebook</span>
               <a class="button-socials" href="#">
                 <img src="img/icon-fb.svg" width="12" height="22" alt="Facebook сайта">
               </a>
             </li>
             <li class="socials-item">
+              <span class="hidden">YouTube</span>
               <a class="button-socials" href="#">
                 <img src="img/icon-youtube.svg" width="20" height="16" alt="YouTube сайта">
               </a>
@@ -229,7 +232,7 @@
       <section class="copyright">
         <h3 class="hidden">Create by</h3>
           <p>Website by</p>
-          <a href="https://htmlacademy.ru/intensive/htmlcss">
+          <a href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Сайти HTML Academy">
             <svg class="copyright-logo" aria-hidden="true" focusable="false" width="115" height="34" viewBox="0 0 115 34" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0)">
               <path d="M0 12.8806V15.4567H2.45789V12.8806H0Z" fill="black"/>
