@@ -848,6 +848,7 @@ body {
   background-color: var(--toggle);
   border: 8px solid var(--basic-white);
   border-radius: 50%;
+  box-shadow: 0 2px 0 0 var(--toggle);
   position: absolute;
 }
 
@@ -862,12 +863,12 @@ body {
 
 .toggle:hover,
 .toggle:focus {
-  width: 6px;
+  width: 5px;
   height: 4px;
   background-color: var(--toggle);
   border: 10px solid var(--basic-white);
   border-radius: 50%;
-  box-shadow: 0 2px 1px 0 var(--toggle);
+  box-shadow: 0 2px 0 0 var(--toggle);
   position: absolute;
 }
 
@@ -938,6 +939,8 @@ body {
 .sorting-item a[href]::after {
   content: url(img/dashed-line.png);
   position: absolute;
+  left: 1px;
+  top: 3px;
 }
 
 .current-sorting {
@@ -1173,6 +1176,7 @@ body {
 /* Modal Form */
 
 .modal {
+  display: none;
   position: absolute;
   top: 2170px;
   right: 0;
@@ -1180,7 +1184,6 @@ body {
   margin: 0 auto;
 
 }
-/**/
 
 .modal-form {
   display: flex;
