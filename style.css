@@ -1176,7 +1176,6 @@ body {
 /* Modal Form */
 
 .modal {
-  display: none;
   position: absolute;
   top: 2170px;
   right: 0;
