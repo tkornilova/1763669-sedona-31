@@ -7,33 +7,31 @@
   <link rel="icon" href="favicon.ico" type="image/svg+xml">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=latin,cyrillic;display=swap">
   <link href="normalize.css" rel="stylesheet">
-  <link href="style.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
 </head>
 
 <body class="page-body">
   <header class="main-header">
-    <div class="main-navigation-wrapper">
-      <nav class="main-navigation">
-        <a class="main-header-logo" href="index.html" aria-label="Переход на главную страницу">
-          <img src="img/logo-sedona.svg" width="138" height="70" alt="Логотип сайта городка Седона">
-        </a>
-        <ul class="site-navigation">
-          <li><a href="blank.html" aria-label="Переход в раздел Информация">Информация</a></li>
-          <li><a href="blank.html" aria-label="Переход в раздел Фото и видео">Фото и видео</a></li>
-          <li><a href="blank.html" aria-label="Переход в раздел Карта штата">Карта штата</a></li>
-          <li><a class="current-page">Гостиницы</a></li>
-        </ul>
-      </nav>
-    </div>
+    <nav class="main-navigation">
+      <a class="main-header-logo" href="index.html" aria-label="Переход на главную страницу">
+        <img src="img/logo-sedona.svg" width="138" height="70" alt="Логотип сайта городка Седона">
+      </a>
+      <ul class="site-navigation">
+        <li><a href="blank.html" aria-label="Переход в раздел Информация">Информация</a></li>
+        <li><a href="blank.html" aria-label="Переход в раздел Фото и видео">Фото и видео</a></li>
+        <li><a href="blank.html" aria-label="Переход в раздел Карта штата">Карта штата</a></li>
+        <li><a class="current-page">Гостиницы</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main class="container container-inner">
     <h1 class="hidden">Choose a hotel</h1>
     <section class="container-parameters">
       <h2 class="hidden">Parameters</h2>
-      <form class="parameters" method="get" action="https://echo.htmlacademy.ru">
-        <fieldset class="parameters-form">
-          <div class="parameters-item parameters-item-infrastructure">
+      <form class="parameters parameters-form" method="get" action="https://echo.htmlacademy.ru">
+
+          <fieldset class="parameters-item parameters-item-infrastructure">
             <h3>Инфраструктура:</h3>
             <p>
               <input class="filter-parameter hidden" type="checkbox" name="pool" id="pool" checked >
@@ -47,8 +45,8 @@
               <input class="filter-parameter hidden" type="checkbox" name="wi-fi" id="wi-fi">
               <label for="wi-fi">WI-FI</label>
             </p>
-          </div>
-          <div class="parameters-item parameters-item-housing">
+          </fieldset>
+          <fieldset class="parameters-item parameters-item-housing">
           <h3>Тип жилья:</h3>
             <p>
               <input class="filter-parameter hidden" type="checkbox" name="hotel" id="hotel" checked>
@@ -62,9 +60,9 @@
               <input class="filter-parameter hidden" type="checkbox" name="apartment" id="apartment" checked>
               <label for="apartment">Апартаменты</label>
             </p>
-          </div>
-          <div class="parameters-item parameters-item-price">
-          <h3>Стоимость в сутки, ₽:</h3>
+          </fieldset>
+          <fieldset class="parameters-item parameters-item-price">
+            <h3>Стоимость в сутки, ₽:</h3>
             <div class="price">
               <div class="min-price">
                 <label for="min-price">От</label>
@@ -84,8 +82,7 @@
               <div class="toggle toggle-max" tabindex="0"></div>
             </div>
             <button class="button-show" type="submit" aria-label="Показать доступные отели">Показать</button>
-          </div>
-        </fieldset>
+          </fieldset>
       </form>
     </section>
     <section class="container-sorting">
@@ -98,12 +95,14 @@
           <li class="sorting-item"><a href="#" aria-label="Сортировка по типу">По типу</a></li>
           <li class="sorting-item"><a href="#" aria-label="Сортировка по рейтингу">По рейтингу</a></li>
         </ul>
-        <svg class="icon-up" tabindex="0" aria-hidden="true" focusable="false" width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA"/>
-        </svg>
-        <svg class="icon-down" tabindex="0" aria-hidden="true" focusable="false" width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M5.5 10L0 0H11" fill="#81B3D2"/>
-        </svg>
+        <ul class="icons">
+          <svg class="icon-up" tabindex="0" aria-hidden="true" focusable="false" width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA"/>
+          </svg>
+          <svg class="icon-down" tabindex="0" aria-hidden="true" focusable="false" width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5.5 10L0 0H11" fill="#81B3D2"/>
+          </svg>
+        </ul>
       </div>
       <ul class="hotels-list">
         <li class="hotels-item">
