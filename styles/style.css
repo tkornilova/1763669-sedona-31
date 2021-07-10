@@ -36,7 +36,7 @@ body {
   background-color: var(--basic-white);
   min-height: 100%;
   display: grid;
-  grid-template-columns: min-content 1fr min min-content;
+  grid-template-rows: min-content 1fr min-content min-content;
   align-content: start;
   box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
 }
@@ -809,6 +809,7 @@ body {
   color: var(--basic-white);
   background-color: transparent;
   display: inline-block;
+  vertical-align: middle;
   width: 137px;
   height: 36px;
   align-self: center;
@@ -864,6 +865,7 @@ body {
 }
 
 .toggle-max {
+  cursor: pointer;
   left: 255px;
   top: 11px;
 }
@@ -1095,6 +1097,7 @@ body {
 
 .column-price p{
   display: inline-block;
+  vertical-align: middle;
   padding: 0;
   margin-top: 0;
   margin-bottom: 15px;

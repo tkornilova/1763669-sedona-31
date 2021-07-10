@@ -24,7 +24,7 @@ link.addEventListener("click", function (evt) {
 
 /* Modal Hide */
 
-window.addEventListener("keydown", function(evt) {
+window.addEventListener("keydown", function (evt) {
   if (evt.key === "Esc" || evt.key === "Escape") {
     if (popup.classList.contains("modal-show")) {
       evt.preventDefault();
