@@ -1,53 +1,41 @@
 const link = document.querySelector(".button-find-hotel");
 const popup = document.querySelector(".modal");
-
 const dateIn = popup.querySelector(".modal-date-in");
-const dateOut = popup.querySelector(".modal-date-out");
+const adults = popup.querySelector(".modal-adults");
+const children = popup.querySelector(".modal-children");
 const form = popup.querySelector(".booking-date");
-const storage = localStorage.getItem ("dateIn");
+const storage = localStorage.getItem ("adults");
+
 let isStorageSupport = true;
 let storage = "";
 
-/* Modal Show */
-
-link.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  popup.classList.add("modal-show");
-
-  if (storage) {
-    dateIn.value = storage;
-    dateOut.focus();
-  } else {
-    dateIn.focus();
-  }
-});
-
-/* Modal Hide */
-
-window.addEventListener("keydown", function (evt) {
-  if (evt.key === "Esc" || evt.key === "Escape") {
-    if (popup.classList.contains("modal-show")) {
-      evt.preventDefault();
-      popup.classList.remove("modal-show");
-    }
-  }
-})
-
-/* Form Checking */
-
 try {
-  storage = localStorage.getItem("dateIn");
+  storage = localStorage.getItem("adults");
 } catch (err) {
   isStorageSupport = false;
 }
 
+/* Modal Show/Hide */
+
+link.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  popup.classList.toggle("modal-show");
+  dateIn.focus();
+  if (storage) {
+    adults.value = storage;
+  }
+});
+
+/* Form Check */
+
 form.addEventListener("submit", function (evt) {
-  if (!dateIn.value || !dateOut.value) {
-    evt.preventDefault();
-    console.log("Заполните оба поля");
+  if (!dateIn.value || !dateOut.value || !adults.value) {
+   evt.preventDefault();
+   console.log("Заполните все необходимые поля");
   } else {
     if (isStorageSupport) {
-      localStorage.setItem("dateIn", dateIn.value);
+      localStorage.setItem("adults", adults.value);
     }
   }
 });
+
