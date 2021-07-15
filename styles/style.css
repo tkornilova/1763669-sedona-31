@@ -16,6 +16,12 @@
   --color-triangle: #CACACA;
   --toggle: #ABABAB;
   --icon-disabled: #6A6A6A;
+  --white-opacity: rgba(255, 255, 255, 0.3);
+  --body: rgba(0, 1, 1, 0.2);
+  --footer-opacity: rgba(255, 255, 255, 0.9);
+  --copyright-shadow: rgba(0, 0, 0, 0.25);
+  --icon-shadow: rgba(0, 0, 0, 0.25);
+  --modal-shadow: rgba(0, 1, 1, 0.15);
 }
 
 .page {
@@ -38,7 +44,7 @@ body {
   display: grid;
   grid-template-rows: min-content 1fr min-content min-content;
   align-content: start;
-  box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
+  box-shadow: 0px 5px 15px var(--body);
 }
 
 
@@ -463,7 +469,7 @@ body {
 
 .button-find-hotel:active {
   background-color: var(--deepest-brown);
-  color: rgba(255, 255, 255, 0.3);
+  color: var(--white-opacity);
 }
 
 .button-find {
@@ -481,7 +487,7 @@ body {
 
 .button-find:active {
   background-color: var(--deepest-blue);
-  opacity: 0.3;
+  color: var(--white-opacity);
 }
 
 /* Footer */
@@ -500,7 +506,7 @@ body {
 .main-footer {
   width: 1200px;
   height: 120px;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: var(--footer-opacity);
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
@@ -601,7 +607,7 @@ body {
 }
 
 .copyright-logo path {
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0px 4px 4px var(--copyright-shadow));
 }
 
 .copyright-logo:hover path,
@@ -752,7 +758,7 @@ body {
   top: -2px;
   left: -5px;
   border: none;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0px 4px 4px var(--icon-shadow));
   background-image: url(../img/check-disabled.svg);
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -1150,9 +1156,8 @@ body {
 }
 
 .button-details:active {
-  color: var(--basic-white);
+  color: var(--white-opacity);
   background-color: var(--deepest-blue);
-  opacity: 0.3;
 }
 
 .button-book {
@@ -1178,9 +1183,8 @@ body {
 }
 
 .button-book:active {
-  color: var(--basic-white);
+  color: var(--white-opacity);
   background-color: var(--deepest-brown);
-  opacity: 0.3;
 }
 
 
@@ -1192,7 +1196,7 @@ body {
 
 .modal-show {
   position: absolute;
-  bottom: -198px;
+  bottom: -196px;
   right: 0;
   left: 0;
   margin: 0 auto;
@@ -1212,7 +1216,7 @@ body {
   padding-right: 55px;
   width: 568px;
   min-height: 395px;
-  box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
+  box-shadow: 0px 7px 15px var(--modal-shadow);
   box-sizing: border-box;
   background-color: var(--basic-white);
 }
@@ -1407,6 +1411,6 @@ body {
 }
 
 .button-find:active {
+  color: var(--white-opacity);
   background-color: var(--deepest-blue);
-  opacity: 0.3;
 }
