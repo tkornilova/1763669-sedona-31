@@ -10,6 +10,7 @@ link.addEventListener("click", function (evt) {
   evt.preventDefault();
   popup.classList.toggle("modal-show");
   dateIn.focus();
+
 });
 
 /* Form Check */
@@ -17,6 +18,7 @@ link.addEventListener("click", function (evt) {
 form.addEventListener("submit", function (evt) {
   if (!dateIn.value || !dateOut.value || !adults.value) {
    evt.preventDefault();
+   console.log("Заполните все необходимые поля");
   }
 });
 
