@@ -917,7 +917,7 @@ body {
 .sorting-list {
   display: flex;
   flex-wrap: wrap;
-  width: 741px;
+  width: 701px;
   justify-content: flex-start;
   margin: 0;
   align-items: center;
@@ -985,6 +985,7 @@ body {
 .icons {
   display: flex;
   padding-top: 10px;
+  list-style: none;
 }
 
 .icon-up {
